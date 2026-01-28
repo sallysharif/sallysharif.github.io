@@ -21,11 +21,17 @@
     .sidebar a{display:block;margin:6px 0;font-size:16px;text-decoration:none;color:#111;}
 
     .section-title{font-size:32px;margin:0 0 12px 0;}
-    .subhead{font-size:18px;font-weight:700;margin:24px 0 6px 0;text-transform:uppercase;}
-    .pub{margin-bottom:14px;font-size:18px;line-height:1.5;}
+    .subhead{font-size:18px;font-weight:700;margin:24px 0 10px 0;text-transform:uppercase;}
+
+    .publist{list-style:none;padding-left:0;margin:0;}
+    .pub{margin:0 0 12px 0;font-size:18px;line-height:1.5;}
+    .pub strong{font-weight:700;}
+    .pub a{color:#111;text-decoration:underline;}
     .pub em{font-style:italic;}
 
-    @media (max-width:800px){ .grid{grid-template-columns:1fr;} }
+    @media (max-width:800px){
+      .grid{grid-template-columns:1fr;}
+    }
   </style>
 </head>
 
@@ -43,6 +49,7 @@
   <div class="wrap">
     <div class="grid">
 
+      <!-- LEFT SIDEBAR -->
       <div class="sidebar">
         <img class="headshot" src="assets/headshot.jpg" alt="Sally Sharif" />
 
@@ -50,44 +57,138 @@
         <p>Lecturer, Political Science (UBC)</p>
         <p>Incoming Assistant Professor, Holy Cross</p>
 
-        <a href="cv.html">Curriculum vitae</a>
-        <a href="#">Google Scholar</a>
-        <a href="#">ORCID</a>
+        <a href="Sharif_CV.pdf" target="_blank" rel="noopener">Curriculum vitae</a>
+        <a href="https://scholar.google.com/citations?user=PLNigkwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://x.com/Sally_Sharif1" target="_blank" rel="noopener">X</a>
       </div>
 
+      <!-- MAIN CONTENT -->
       <div>
-        <h1 class="section-title">Research</h1>
+        <h1 class="section-title">Publications</h1>
 
-        <div class="subhead">Peer-Reviewed</div>
+        <div class="subhead">Peer-Reviewed Journal Articles</div>
+        <ul class="publist">
 
-        <div class="subhead">Journal Articles</div>
+          <li class="pub">
+            <strong>12.</strong> Sharif, Sally. Forthcoming in 2026. “Why do Armed Groups Return to War After Disarmament, Demobilization, and Reintegration? Introducing the DDR-40 Dataset (1980–2020).” <em>Journal of Conflict Resolution</em>.
+            [<a href="https://osf.io/ysfn3/files/uhp65" target="_blank" rel="noopener">Working Paper</a>]
+          </li>
 
-        <div class="pub">
-          Sharif, Sally. Forthcoming. “Why do Armed Groups Return to War After Disarmament, Demobilization, and Reintegration? Introducing the DDR-40 Dataset (1980–2020).”
-          <em>Journal of Conflict Resolution</em>.
-        </div>
+          <li class="pub">
+            <strong>11.</strong> Sharif, Sally, and Julio Zuluaga-Jimenez. Forthcoming in 2026. “When Reintegration of Ex-Combatants Turns Deadly: The State’s Role in Preventing Post-Conflict Homicides.” <em>International Interactions</em>.
+          </li>
 
-        <div class="pub">
-          Sharif, Sally. Forthcoming. Article title.
-          <em>International Studies Quarterly</em>.
-        </div>
+          <li class="pub">
+            <strong>10.</strong> Schwarz, Christopher, Sally Sharif, and Christian Oswald. Forthcoming in 2026. “Sharpening Blunt Instruments: Exploiting Non-Linearities to Enhance Identification.” <em>International Studies Quarterly</em>.
+            [<a href="https://osf.io/yu3nr" target="_blank" rel="noopener">Working Paper</a>]
+          </li>
 
-        <div class="pub">
-          Sharif, Sally. Article title.
-          <em>International Interactions</em>.
-        </div>
+          <li class="pub">
+            <strong>9.</strong> Sharif, Sally, and Francy Carranza-Franco. 2025.
+            <a href="https://doi.org/10.1177/07388942251336643" target="_blank" rel="noopener">“Delegative Peacebuilding: Explaining Post-Conflict Selective Violence.”</a>
+            <em>Conflict Management and Peace Science</em>.
+            [<a href="https://dataverse.harvard.edu/citation?persistentId=doi:10.7910/DVN/9XQH2V" target="_blank" rel="noopener">Replication files</a>]
+          </li>
 
-        <div class="subhead">Books</div>
+          <li class="pub">
+            <strong>8.</strong> Sharif, Sally, and Madhav Joshi. 2025.
+            <a href="https://doi.org/10.1080/21622671.2023.2243996" target="_blank" rel="noopener">“Territorial Consolidation After Rebel Victory: When does Civil War Recur?”</a>
+            <em>Territory, Politics, Governance</em> 13(7), 920–940.
+            [<a href="https://doi.org/10.7910/DVN/CKHUJF" target="_blank" rel="noopener">Replication files</a>]
+          </li>
 
-        <div class="pub">
-          <em>Beyond Disarmament: Why Rebels Return to Arms</em>. Book manuscript.
-        </div>
+          <li class="pub">
+            <strong>7.</strong> Sharif, Sally, Ilia Murazashvili, and Jennifer Brick Murtazashvili. 2025.
+            <a href="https://doi.org/10.1007/s11127-025-01261-w" target="_blank" rel="noopener">“Rebel Victory and Constitutional Change.”</a>
+            <em>Public Choice</em> (February).
+            [<a href="https://osf.io/preprints/osf/ryhbq" target="_blank" rel="noopener">Working paper</a>]
+            [<a href="https://doi.org/10.7910/DVN/CN3MHM" target="_blank" rel="noopener">Replication files</a>]
+          </li>
 
-        <div class="subhead">Working Papers</div>
+          <li class="pub">
+            <strong>6.</strong> Quinn, Jason M., T. David Mason, Mustafa Kirisci, and Sally Sharif. 2024.
+            <a href="https://doi.org/10.1080/10242694.2023.2183346" target="_blank" rel="noopener">“Proto-Insurgency, Repression-Driven Contagion, and Civil War Onset.”</a>
+            <em>Peace and Defense Economics</em> 35(5): 601–621.
+          </li>
 
-        <div class="pub">
-          Sharif, Sally. Working paper title.
-        </div>
+          <li class="pub">
+            <strong>5.</strong> Sharif, Sally. 2023.
+            <a href="https://doi.org/10.1080/09546553.2021.2017895" target="_blank" rel="noopener">“How Wartime Bonds Affect Ex-Combatant Political Attitudes: A Natural Experiment with the FARC.”</a>
+            <em>Terrorism and Political Violence</em> 35(5): 1106–1125.
+          </li>
+
+          <li class="pub">
+            <strong>4.</strong> Overton, Kathryn, and Sally Sharif. 2023.
+            <a href="https://dx.doi.org/10.1353/hrq.2023.a903336" target="_blank" rel="noopener">“Agents with Principles? Preventing Conflict-Related Sexual Violence with Human Rights Laws and Norms.”</a>
+            <em>Human Rights Quarterly</em> 45(3): 487–512.
+          </li>
+
+          <li class="pub">
+            <strong>3.</strong> Sharif, Sally. 2022.
+            <a href="https://doi.org/10.1080/13533312.2022.2128337" target="_blank" rel="noopener">“Can the Rebel Body Function without its Visible Heads? The Role of Mid-Level Commanders in Peacebuilding.”</a>
+            <em>International Peacekeeping</em> 29(5): 709–740.
+          </li>
+
+          <li class="pub">
+            <strong>2.</strong> Sharif, Sally. 2021.
+            <a href="https://doi.org/10.1080/1057610X.2018.1538153" target="_blank" rel="noopener">“Predicting the End of the Syrian Conflict: From Theory to the Reality of a Civil War.”</a>
+            <em>Studies in Conflict and Terrorism</em> 44(4): 326–345.
+          </li>
+
+          <li class="pub">
+            <strong>1.</strong> Sharif, Sally. 2018.
+            <a href="https://eprints.lse.ac.uk/90890/" target="_blank" rel="noopener">“A Critical Review of Evidence from Ex-Combatant Re-Integration Programs.”</a>
+            <em>Politics of Return Project</em>. London, UK: Social Science Research Council.
+          </li>
+
+        </ul>
+
+        <div class="subhead">Editor-Reviewed Publications</div>
+        <ul class="publist">
+
+          <li class="pub">
+            <strong>8.</strong> Sharif, Sally. 2026.
+            <a href="https://theconversation.com/the-colombian-border-is-one-of-the-biggest-obstacles-to-building-a-new-venezuela-272975" target="_blank" rel="noopener">“The Colombian border is one of the biggest obstacles to building a new Venezuela.”</a>
+            <em>The Conversation</em> (13 January).
+          </li>
+
+          <li class="pub">
+            <strong>7.</strong> Sharif, Sally. 2025.
+            <a href="https://theconversation.com/syrian-regime-change-how-rebel-victories-often-lead-to-unstable-non-inclusive-governments-247540" target="_blank" rel="noopener">“Syrian Regime Change: How Rebel Victories Often Lead to Unstable, Non-Inclusive Governments.”</a>
+            <em>The Conversation</em> (2 February).
+          </li>
+
+          <li class="pub">
+            <strong>6.</strong> Sharif, Sally. 2022.
+            <a href="https://www.washingtonpost.com/politics/2022/11/18/ethiopia-peace-tplf-tigray/" target="_blank" rel="noopener">“Ethiopia’s Peace May Depend on Post-Conflict Plans for Tigray Soldiers.”</a>
+            <em>The Washington Post</em> (18 November).
+          </li>
+
+          <li class="pub">
+            <strong>5.</strong> Sharif, Sally, and Madhav Joshi. 2022. “Can Peace Agreements Alone Maintain Peace After Rebel Victory?” <em>Peace Accords Matrix (PAM) Policy Brief Series</em>.
+          </li>
+
+          <li class="pub">
+            <strong>4.</strong> Sharif, Sally. 2022. “How to Canton Ex-Combatants: Inclusive Peacebuilding with the FARC.” <em>Peace Accords Matrix (PAM) Policy Brief Series</em>.
+          </li>
+
+          <li class="pub">
+            <strong>3.</strong> Quinn, Jason M., and Sally Sharif. 2022. “Patterns of Armed Conflict Recurrence among Peace Agreement Signatories.” <em>Peace Accords Matrix (PAM) Policy Brief Series</em>.
+          </li>
+
+          <li class="pub">
+            <strong>2.</strong> Sharif, Sally. 2020.
+            <a href="https://pomeps.org/wp-content/uploads/2020/04/POMEPS_Studies_39_Web.pdf" target="_blank" rel="noopener">“How Robust is the Authoritarian Social Contract? Social Dissent during Iran’s COVID-19 Outbreak.”</a>
+            <em>POMEPS Studies</em> 39.
+          </li>
+
+          <li class="pub">
+            <strong>1.</strong> Sharif, Sally, and Dayron Yegrail. 2019.
+            <a href="https://politicalviolenceataglance.org/2019/09/16/the-art-of-winning-a-peace-agreement-the-case-of-the-farc/" target="_blank" rel="noopener">“The Art of Winning a Peace Agreement: The Case of the FARC.”</a>
+            <em>Political Violence at a Glance</em> (16 September).
+          </li>
+
+        </ul>
 
       </div>
     </div>
