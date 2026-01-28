@@ -10,12 +10,12 @@
     .nav a{padding:10px 14px;text-decoration:none;color:#111;font-weight:600;}
     .hero{position:relative;}
     .hero img{width:100%;height:420px;object-fit:cover;display:block;}
-    .hero h1{position:absolute;left:22px;top:32px;margin:0;font-size:44px;}
     .wrap{max-width:1100px;margin:0 auto;padding:28px 18px;}
     .grid{display:grid;grid-template-columns:260px 1fr;gap:26px;align-items:start;}
     .headshot{width:260px;border:1px solid #ddd;}
     p{font-size:18px;line-height:1.55;margin-top:0;}
-    @media (max-width:800px){ .grid{grid-template-columns:1fr;} .hero img{height:320px;} .hero h1{font-size:34px;} }
+    .name{margin:0 0 10px 0;font-size:34px;font-weight:700;}
+    @media (max-width:800px){ .grid{grid-template-columns:1fr;} .hero img{height:320px;} .name{font-size:30px;} }
   </style>
 </head>
 <body>
@@ -31,13 +31,14 @@
 
   <div class="hero">
     <img src="assets/banner.jpg" alt="Banner" />
-    <h1>Sally Sharif, PhD</h1>
   </div>
 
   <div class="wrap">
     <div class="grid">
       <img class="headshot" src="assets/headshot.jpg" alt="Headshot" />
       <div>
+        <h1 class="name">Sally Sharif, PhD</h1>
+
         <p>Welcome! I am a Lecturer in Political Science at the University of British Columbia and an incoming Assistant Professor of comparative politics at the College of the Holy Cross.</p>
 
         <p>Previously, I was a Post-Doctoral Research Associate at the University of Notre Dame and the Simons Foundation Canada Postdoctoral Fellow at Simon Fraser University. I have a PhD in political science from the Graduate Center of the City University of New York (2021).</p>
