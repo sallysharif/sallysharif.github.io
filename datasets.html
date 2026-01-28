@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Datasets | Sally Sharif</title>
+
+  <style>
+    body{margin:0;font-family:Georgia, "Times New Roman", serif;}
+
+    .nav{display:flex;justify-content:flex-end;border-bottom:1px solid #ddd;padding:10px 18px;}
+    .nav a{padding:10px 14px;text-decoration:none;color:#111;font-weight:600;}
+
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px;}
+    .grid{display:grid;grid-template-columns:260px 1fr;gap:36px;align-items:start;}
+
+    .headshot{width:260px;border:1px solid #ddd;margin-bottom:12px;}
+
+    .sidebar h2{margin:12px 0 4px 0;font-size:20px;}
+    .sidebar p{font-size:16px;line-height:1.4;margin:0 0 6px 0;}
+    .sidebar a{display:block;margin:6px 0;font-size:16px;text-decoration:none;color:#111;}
+
+    .section-title{font-size:32px;margin:0 0 12px 0;}
+    .subhead{font-size:18px;font-weight:700;margin:22px 0 10px 0;text-transform:uppercase;}
+    p{font-size:18px;line-height:1.6;margin:0 0 14px 0;}
+
+    .card{
+      border:1px solid #eee;
+      border-radius:10px;
+      padding:18px;
+      margin:16px 0;
+      box-shadow:0 1px 0 rgba(0,0,0,0.03);
+    }
+
+    .dataset-title{font-size:24px;margin:0 0 6px 0;}
+    .dataset-meta{font-size:16px;color:#333;margin:0 0 12px 0;}
+
+    .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 2px 0;}
+    .btn{
+      display:inline-block;
+      padding:10px 12px;
+      border:1px solid #111;
+      border-radius:8px;
+      text-decoration:none;
+      color:#111;
+      font-weight:700;
+      font-size:16px;
+    }
+    .btn.secondary{border-color:#bbb;font-weight:600;color:#111;}
+
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 0 0;}
+    .fact{border:1px solid #f0f0f0;border-radius:8px;padding:10px 12px;}
+    .fact .k{font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:#555;margin:0 0 3px 0;}
+    .fact .v{font-size:18px;margin:0;}
+
+    ul{margin:0 0 14px 18px;padding:0;}
+    li{font-size:18px;line-height:1.6;margin:6px 0;}
+
+    .note{font-size:16px;color:#333;margin-top:8px;}
+    .hr{height:1px;background:#eee;margin:18px 0;}
+
+    @media (max-width:800px){
+      .grid{grid-template-columns:1fr;}
+      .facts{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="fieldwork.html">Fieldwork</a>
+    <a href="data.html">Data</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="datasets.html">Datasets</a>
+    <a href="cv.html">CV</a>
+  </div>
+
+  <div class="wrap">
+    <div class="grid">
+
+      <!-- LEFT SIDEBAR -->
+      <div class="sidebar">
+        <img class="headshot" src="assets/headshot.jpg" alt="Sally Sharif" />
+
+        <h2>Sally Sharif</h2>
+        <p>Lecturer, Political Science (UBC)</p>
+        <p>Incoming Assistant Professor, Holy Cross</p>
+
+        <a href="Sally_Sharif_CV.pdf" target="_blank" rel="noopener">Curriculum vitae</a>
+        <a href="https://scholar.google.com/citations?user=PLNigkwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://x.com/Sally_Sharif1" target="_blank" rel="noopener">X</a>
+      </div>
+
+      <!-- MAIN CONTENT -->
+      <div>
+        <h1 class="section-title">Datasets</h1>
+
+        <p>
+          My research combines original datasets with transparent documentation and replication materials.
+          Below are datasets that support my published and ongoing work. For access, citation guidance, and updates,
+          each dataset entry includes a download link and documentation.
+        </p>
+
+        <div class="card">
+          <h2 class="dataset-title">DDR-40: Disarmament, Demobilization, and Reintegration Programs (1980–2020)</h2>
+          <p class="dataset-meta">
+            Global, program–year dataset on DDR design, implementation, and relapse outcomes.
+          </p>
+
+          <div class="btnrow">
+            <!-- Replace # with your Dataverse / OSF link when ready -->
+            <a class="btn" href="#" target="_blank" rel="noopener">Download dataset</a>
+            <a class="btn secondary" href="#" target="_blank" rel="noopener">Codebook</a>
+            <a class="btn secondary" href="#" target="_blank" rel="noopener">Replication files</a>
+          </div>
+
+          <div class="facts">
+            <div class="fact">
+              <p class="k">Coverage</p>
+              <p class="v">83 DDR programs; 407 program-years</p>
+            </div>
+            <div class="fact">
+              <p class="k">Unit of analysis</p>
+              <p class="v">Program–year (counting-process format)</p>
+            </div>
+            <div class="fact">
+              <p class="k">Core content</p>
+              <p class="v">DDR design + implementation + outcomes</p>
+            </div>
+            <div class="fact">
+              <p class="k">Linkages</p>
+              <p class="v">Keyed to UCDP/PRIO conflict identifiers</p>
+            </div>
+          </div>
+
+          <div class="hr"></div>
+
+          <div class="subhead">What DDR-40 measures</div>
+          <p>
+            DDR-40 documents the universe of operational disarmament, demobilization, and reintegration programs worldwide from 1980 to 2020.
+            The dataset is designed for cross-national research on why armed organizations comply with demilitarization—or return to arms while DDR is underway.
+            It records programs that include at least two DDR components: weapon collection/disposal, formal discharge from command structures, and reintegration assistance.
+          </p>
+
+          <ul>
+            <li><b>Program features:</b> target group(s), estimated membership size, whether multiple armed groups are processed, group type (state military vs. non-state; integrated vs. fragmented), cantonment duration, budget, and who implements the program (national, international, or mixed).</li>
+            <li><b>DDR implementation:</b> annual implementation scores for disarmament, demobilization, and reintegration on a 0–3 scale (no action to full implementation), comparable across cases and years.</li>
+            <li><b>Peacebuilding context:</b> annual implementation of key peace-accord provisions—rights protections (e.g., amnesty, prisoner release, women’s and children’s rights) and institutional reforms (executive, legislative, electoral, constitutional, judicial, and military reform)—also on a 0–3 scale.</li>
+            <li><b>Outcomes:</b> program-year indicators of relapse, including rearmament during DDR, factional rearmament, and rearmament after program completion, linked to conflict recurrence in UCDP/PRIO data.</li>
+          </ul>
+
+          <div class="subhead">How it’s built</div>
+          <p>
+            DDR-40 was compiled from academic and documentary sources across nine languages, including peace agreements, UN and World Bank documents,
+            IOM publications, truth commission materials, human rights reports, and news archives. For older programs and cases with limited public coverage,
+            the project drew on additional archival materials and practitioner documentation. A structured recoding effort by independent research assistants
+            was used to assess and improve reliability and consistency across cases.
+          </p>
+
+          <div class="subhead">Best uses</div>
+          <ul>
+            <li>Comparative studies of DDR success/failure and conflict recurrence.</li>
+            <li>Testing how institutional reforms and rights-based commitments shape compliance with disarmament.</li>
+            <li>Evaluating how program scale, fragmentation, and implementation capacity influence relapse risks.</li>
+            <li>Merging with subnational data (e.g., homicide, illicit economies, elections) via country-year or conflict-ID keys.</li>
+          </ul>
+
+          <p class="note">
+            <b>Planned release:</b> DDR-40, the codebook, and documentation will be hosted on Harvard Dataverse, with a changelog and updates mirrored on this website.
+          </p>
+        </div>
+
+        <!-- Optional placeholder for future datasets -->
+        <div class="card">
+          <h2 class="dataset-title">Additional datasets</h2>
+          <p class="dataset-meta">In progress / available upon request</p>
+          <p>
+            I maintain additional original datasets used in related projects (e.g., subnational peacebuilding and post-conflict violence).
+            As those projects are published, I will add public releases and replication packages here.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
