@@ -32,7 +32,7 @@
     }
     .nav .brand{
       font-weight:700;
-      font-size:18px;   /* BIGGER NAME */
+      font-size:18px;
       text-decoration:none;
       color:var(--text);
       white-space:nowrap;
@@ -51,18 +51,32 @@
       white-space:nowrap;
     }
 
-    /* Layout */
+    /* Top main image (NOT stretched) */
+    .hero{
+      max-width:1120px;
+      margin:0 auto;
+      padding:22px 18px 0 18px;
+    }
+    .hero img{
+      width:100%;
+      height:auto;              /* important: prevents stretching */
+      display:block;
+      border:1px solid var(--rule);
+      border-radius:10px;
+    }
+
+    /* Layout below image */
     .wrap{
       max-width:1120px;
       margin:0 auto;
-      padding:30px 18px 40px 18px;
+      padding:22px 18px 40px 18px;
       display:flex;
-      justify-content:center;   /* CENTER THE WHOLE BLOCK */
+      justify-content:center;
     }
 
     .grid{
       display:grid;
-      grid-template-columns:260px 620px; /* FIXED + BALANCED */
+      grid-template-columns:260px 620px;
       gap:44px;
       align-items:start;
     }
@@ -76,7 +90,7 @@
 
     /* Main content */
     .content{
-      width:620px;   /* match grid column */
+      width:620px;
     }
     .section-title{
       font-size:22px;
@@ -97,29 +111,10 @@
       text-decoration:underline;
       text-underline-offset:2px;
     }
-
     em{font-style:italic;}
-
-    /* Embedded banner photo (like teaching page) */
-    .home-photo{
-      width:100%;
-      display:block;
-      border:1px solid var(--rule);
-      border-radius:10px;
-      margin:10px 0 10px 0;
-    }
-    .figure-caption{
-      font-size:13.5px;
-      line-height:1.4;
-      color:#333;
-      margin:8px 0 18px 0;
-      text-align:left;
-      hyphens:none;
-    }
 
     /* Mobile */
     @media (max-width:900px){
-      .wrap{justify-content:flex-start;}
       .grid{
         grid-template-columns:1fr;
         gap:28px;
@@ -128,7 +123,7 @@
       .headshot{
         width:100%;
       }
-      .section-title{font-size:24px;}
+      .wrap{justify-content:flex-start;}
     }
   </style>
 </head>
@@ -148,48 +143,50 @@
     </div>
   </div>
 
+  <!-- Main image on top -->
+  <div class="hero">
+    <img src="assets/banner.jpg" alt="Banner" />
+  </div>
+
+  <!-- About section below -->
   <div class="wrap">
-    <div class="grid">
+    <div style="width:924px; max-width:100%;">
+      <h1 class="section-title">About</h1>
 
-      <div class="sidebar">
-        <img class="headshot" src="assets/headshot.jpg" alt="Sally Sharif" />
+      <div class="grid">
+        <div class="sidebar">
+          <img class="headshot" src="assets/headshot.jpg" alt="Sally Sharif" />
+        </div>
+
+        <div class="content">
+          <p>
+            Welcome! I am a Lecturer in Political Science at the University of British Columbia and an incoming
+            Assistant Professor of comparative politics at the College of the Holy Cross.
+          </p>
+
+          <p>
+            My research lies at the intersection of comparative politics, international relations, and political methodology.
+            I examine how governments, international organizations, and third-party states respond to political violence,
+            whether through repression, cooption, containment, or conflict resolution strategies. I study how these
+            responses shape post-conflict governance and security using multi-method research designs.
+          </p>
+
+          <p>
+            My work has been published or is forthcoming in <em>Journal of Conflict Resolution</em>;
+            <em>International Studies Quarterly</em>; <em>Conflict Management and Peace Science</em>;
+            <em>International Interactions</em>; and <em>International Peacekeeping</em>, among others.
+            You can find my Google Scholar page
+            <a href="https://scholar.google.com/citations?user=PLNigkwAAAAJ&hl=en" target="_blank" rel="noopener">here</a>
+            and my CV <a href="Sharif_CV.pdf" target="_blank" rel="noopener">here</a>.
+          </p>
+
+          <p>
+            I speak seven languages and have done field research in Europe, Latin America, and the Middle East.
+            Outside academia, I am a triathlete and care deeply about environmental degradation, which is apparent
+            first and foremost in our mountains and lakes.
+          </p>
+        </div>
       </div>
-
-      <div class="content">
-        <h1 class="section-title">About</h1>
-
-        <!-- Replace the stretched hero banner with an embedded image -->
-        <img class="home-photo" src="assets/banner.jpg" alt="Banner" />
-        <p class="figure-caption"></p>
-
-        <p>
-          Welcome! I am a Lecturer in Political Science at the University of British Columbia and an incoming
-          Assistant Professor of comparative politics at the College of the Holy Cross.
-        </p>
-
-        <p>
-          My research lies at the intersection of comparative politics, international relations, and political methodology.
-          I examine how governments, international organizations, and third-party states respond to political violence,
-          whether through repression, cooption, containment, or conflict resolution strategies. I study how these
-          responses shape post-conflict governance and security using multi-method research designs.
-        </p>
-
-        <p>
-          My work has been published or is forthcoming in <em>Journal of Conflict Resolution</em>;
-          <em>International Studies Quarterly</em>; <em>Conflict Management and Peace Science</em>;
-          <em>International Interactions</em>; and <em>International Peacekeeping</em>, among others.
-          You can find my Google Scholar page
-          <a href="https://scholar.google.com/citations?user=PLNigkwAAAAJ&hl=en" target="_blank" rel="noopener">here</a>
-          and my CV <a href="Sharif_CV.pdf" target="_blank" rel="noopener">here</a>.
-        </p>
-
-        <p>
-          I speak seven languages and have done field research in Europe, Latin America, and the Middle East.
-          Outside academia, I am a triathlete and care deeply about environmental degradation, which is apparent
-          first and foremost in our mountains and lakes.
-        </p>
-      </div>
-
     </div>
   </div>
 
