@@ -20,20 +20,37 @@
       -moz-osx-font-smoothing:grayscale;
     }
 
-    /* Nav */
+    /* Nav (name left, links right; wraps cleanly on phone) */
     .nav{
       display:flex;
-      justify-content:flex-end;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;              /* KEY: allows wrap on small screens */
       border-bottom:1px solid var(--rule);
       padding:10px 18px;
+      gap:10px 14px;               /* row/column gap */
+    }
+    .nav .brand{
+      font-weight:700;
+      font-size:14.5px;
+      text-decoration:none;
+      color:var(--text);
+      white-space:nowrap;
+    }
+    .nav .links{
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+      flex-wrap:wrap;              /* links wrap instead of overflowing */
       gap:2px;
     }
-    .nav a{
-      padding:10px 14px;
+    .nav .links a{
+      padding:8px 12px;            /* slightly tighter so it fits */
       text-decoration:none;
       color:var(--text);
       font-weight:600;
       font-size:14.5px;
+      white-space:nowrap;
     }
 
     /* Banner */
@@ -58,27 +75,11 @@
     }
 
     /* Sidebar */
-    .sidebar-top{
-      margin:0 0 10px 0;
-    }
-    .sidebar-top h2{
-      margin:0 0 6px 0;
-      font-size:14px;
-      font-weight:700;
-    }
-    .sidebar-top a{
-      display:block;
-      margin:6px 0;
-      font-size:14px;
-      text-decoration:none;
-      color:var(--text);
-    }
-
     .headshot{
       width:260px;
       border:1px solid var(--rule);
       display:block;
-      margin:0; /* no text below, so remove bottom margin */
+      margin:0;
     }
 
     /* Main content */
@@ -102,6 +103,11 @@
       -webkit-hyphens:auto;
       -ms-hyphens:auto;
     }
+    .content a{
+      color:var(--text);
+      text-decoration:underline;
+      text-underline-offset:2px;
+    }
 
     em{font-style:italic;}
 
@@ -116,12 +122,16 @@
 <body>
 
   <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="fieldwork.html">Fieldwork</a>
-    <a href="datasets.html">Datasets</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="Sharif_CV.pdf" target="_blank" rel="noopener">CV</a>
+    <a class="brand" href="index.html">Sally Sharif</a>
+
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="fieldwork.html">Fieldwork</a>
+      <a href="datasets.html">Datasets</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="Sharif_CV.pdf" target="_blank" rel="noopener">CV</a>
+    </div>
   </div>
 
   <div class="hero">
@@ -132,12 +142,10 @@
     <div class="grid">
 
       <div class="sidebar">
-
         <img class="headshot" src="assets/headshot.jpg" alt="Sally Sharif" />
       </div>
 
       <div class="content">
-        <!-- Change title from Sally Sharif to About -->
         <h1 class="section-title">About</h1>
 
         <p>
@@ -162,6 +170,12 @@
           My work has been published or is forthcoming in <em>Journal of Conflict Resolution</em>;
           <em>International Studies Quarterly</em>; <em>Conflict Management and Peace Science</em>;
           <em>International Interactions</em>; and <em>International Peacekeeping</em>, among others.
+        </p>
+
+        <!-- NEW paragraph after publications -->
+        <p>
+          You can find my Google Scholar page <a href="https://scholar.google.com/citations?user=PLNigkwAAAAJ&hl=en" target="_blank" rel="noopener">here</a>
+          and my CV <a href="Sharif_CV.pdf" target="_blank" rel="noopener">here</a>.
         </p>
 
         <p>
