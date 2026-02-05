@@ -6,10 +6,11 @@
   <title>Commentary | Sally Sharif</title>
 
   <style>
-    /* Base (match index) */
+    /* Base (match your site) */
     :root{
       --text:#111;
       --rule:#ddd;
+      --card:#eee;
     }
     body{
       margin:0;
@@ -32,7 +33,7 @@
     }
     .nav .brand{
       font-weight:700;
-      font-size:18px;   /* BIGGER NAME */
+      font-size:18px;
       text-decoration:none;
       color:var(--text);
       white-space:nowrap;
@@ -51,94 +52,104 @@
       white-space:nowrap;
     }
 
-    /* Centered single-column layout (match index main column) */
+    /* Teaching-page-like centered layout */
     .wrap{
       max-width:1120px;
       margin:0 auto;
-      padding:30px 18px 40px 18px;
+      padding:34px 18px 44px 18px;
       display:flex;
       justify-content:center;
     }
     .content{
-      width:620px;   /* match index main content width */
+      width:820px; /* a bit wider than single-column, similar to teaching layout */
     }
 
-    /* Headings + text (match index) */
-    .section-title{
-      font-size:22px;
-      line-height:1.05;
-      margin:0 0 14px 0;
+    /* Title + intro */
+    .page-title{
+      font-size:24px;
+      line-height:1.08;
+      margin:0 0 12px 0;
       font-weight:700;
       letter-spacing:-0.2px;
+      text-align:left;
     }
-    p{
+    .intro{
       font-size:14.5px;
       line-height:1.62;
-      margin:0 0 14px 0;
+      margin:0 0 18px 0;
       text-align:justify;
       hyphens:auto;
     }
-    a{
-      color:var(--text);
-      text-decoration:underline;
-      text-underline-offset:2px;
-    }
-    em{font-style:italic;}
 
-    .subhead{
-      margin:24px 0 10px 0;
-      font-size:15px;
-      font-weight:700;
-      text-transform:uppercase;
-      letter-spacing:0.6px;
+    /* Two-column blog grid */
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:8px;
     }
 
-    /* Cards (scaled down to index typography) */
-    .card{
+    /* Entry card (simple, teaching-like) */
+    .entry{
       border:1px solid #eee;
       border-radius:10px;
       padding:16px;
-      margin:16px 0;
       box-shadow:0 1px 0 rgba(0,0,0,0.03);
+      background:#fff;
     }
-    .post-title{
+    .entry-title{
       font-size:16px;
       font-weight:700;
       margin:0 0 6px 0;
       line-height:1.25;
     }
-    .post-meta{
-      font-size:14px;
+    .entry-meta{
+      font-size:13.5px;
       color:#333;
-      margin:0 0 12px 0;
-      line-height:1.55;
+      margin:0 0 10px 0;
+      line-height:1.45;
       text-align:left;
       hyphens:none;
     }
-
-    ul{
-      margin:0 0 14px 18px;
-      padding:0;
-    }
-    li{
+    .entry p{
       font-size:14.5px;
       line-height:1.62;
-      margin:6px 0;
+      margin:0 0 10px 0;
       text-align:justify;
       hyphens:auto;
     }
 
-    .hr{
-      height:1px;
-      background:#eee;
-      margin:18px 0;
+    /* “Read” toggle without links (click to expand) */
+    details{
+      margin-top:8px;
     }
+    summary{
+      cursor:pointer;
+      font-weight:700;
+      font-size:14px;
+      list-style:none;
+      display:inline-block;
+      padding:7px 10px;
+      border:1px solid #111;
+      border-radius:8px;
+      user-select:none;
+    }
+    summary::-webkit-details-marker{ display:none; }
+
+    .full{
+      margin-top:12px;
+      border-top:1px solid #eee;
+      padding-top:12px;
+    }
+
+    /* Small typographic helpers */
+    em{font-style:italic;}
 
     /* Mobile */
     @media (max-width:900px){
-      .wrap{justify-content:flex-start;}
       .content{width:100%;}
-      .section-title{font-size:24px;}
+      .grid{grid-template-columns:1fr;}
+      .page-title{font-size:24px;}
     }
   </style>
 </head>
@@ -162,132 +173,99 @@
   <div class="wrap">
     <div class="content">
 
-      <h1 class="section-title">Commentary</h1>
-
-      <p>
-        This page features short, accessible write-ups of my research. I use it to translate academic findings into
-        plain language, clarify methodological contributions, and share what the evidence implies for how we study
-        conflict and peace.
+      <h1 class="page-title">Commentary</h1>
+      <p class="intro">
+        Short, accessible write-ups of my research. These posts are written for a general audience and focus on what the
+        argument is, what the evidence shows, and why it matters.
       </p>
 
-      <div class="card">
-        <h2 class="post-title">Sharpening Blunt Instruments: Exploiting Non-Linearities to Enhance Identification</h2>
-        <p class="post-meta">Forthcoming in <em>International Studies Quarterly</em></p>
+      <div class="grid">
 
+        <!-- ENTRY 1 (copy/paste this whole <article> block to add more posts) -->
+        <article class="entry">
+          <h2 class="entry-title">A Novel Approach for Instrumental Variable Estimation</h2>
+          <p>
+            Instrumental variables can allow causal claims when treatments are endogenous, but many IV designs are fragile:
+            instruments are reused and the exclusion restriction is hard to defend.
+            A common fix is hiding in plain sight: modeling the first stage flexibly. 
+            Together with Christopher Schwarz and Christian Oswald, we explain this approach in a forthcoming paper in <em>International Studies Quarterly<em>. 
+          </p>
+
+          <p>
+            When the relationship between an exogenous source of variation and an endogenous regressor is non-linear,
+            flexible first stages (splines / generalized additive models) can extract distinct components of variation.
+            Those components can strengthen relevance, reduce post-instrument bias, and in some settings help identify more
+            than one endogenous effect from the same source.
+          </p>
+
+          <details>
+            <summary>Read</summary>
+
+            <div class="full">
+              <p>
+                A key move in the paper is conceptual: distinguish the <em>source</em> of exogenous variation from the
+                <em>instrument(s)</em> used in estimation. Researchers often treat a variable <em>z</em> as “the instrument.”
+                But identification comes from how <em>z</em> maps on to the endogenous variable(s). If that mapping is
+                non-linear, different functions of <em>z</em> can capture different parts of the exogenous variation.
+              </p>
+
+              <p>
+                Empirically, the paper develops a control-function approach based on <strong>two-stage residual inclusion (2SRI)</strong>:
+                estimate flexible first stages for each endogenous variable as a function of <em>z</em>, extract residuals,
+                then include those residuals in the outcome model to correct for endogeneity while keeping the first stage
+                non-linear. This approach improves relevance when linear approximations underfit, and it makes it easier to
+                model settings where the same exogenous source plausibly shifts multiple determinants of the outcome.
+              </p>
+
+              <p>
+                The paper also treats “multiple identification” as an empirical question. One source can only identify
+                multiple endogenous effects if the fitted first-stage components are <strong>functionally distinct</strong>.
+                If they are too similar, the system becomes near-singular: estimates turn unstable and inference becomes
+                sensitive to small perturbations. To address this, we introduce diagnostics that screen for
+                near-degeneracy and precision loss, making clear when the data support the identification claims and when
+                they do not.
+              </p>
+
+              <p>
+                The payoff is practical: in applied work, instruments often affect many
+                things. Rather than relying on heroic exclusion stories or abandoning IV altogether, this approach models
+                the complexity directly, strengthens first stages when non-linearities matter, and provides diagnostics to
+                separate stable identification from near-collinearity.
+              </p>
+            </div>
+          </details>
+        </article>
+
+        <!-- ENTRY 2 PLACEHOLDER (duplicate this for more posts) -->
+       <article class="entry" aria-labelledby="op1-title">
+  <header class="entry-head">
+    <h2 class="entry-title" id="op1-title">The Colombian border is one of the biggest obstacles to building a new Venezuela</h2>
+    <p class="entry-meta">Op-ed</p>
+  </header>
+
+  <div class="entry-body">
+    <p>
+      Since American forces captured Venezuelan President Nicolás Maduro, plunging the country into uncertainty, there have been hopes for a transition to democracy, the stabilization of its economy, a reduction in drug trafficking and conditions that might allow millions of Venezuelans abroad to return home.
+      But one factor will impede efforts at stabilizing the country: Venezuela’s hard-to-control border with Colombia, a shadow security zone that serves as a sanctuary and trafficking corridor for armed and dangerous organizations.
+    </p>
+
+    <details class="entry-details">
+      <summary class="entry-summary">Read</summary>
+      <div class="full">
         <p>
-          Instrumental variables (IV) are a workhorse of causal inference in political science and international relations.
-          We reach for IV when the treatment we care about is endogenous—because reverse causality, omitted variables,
-          selection, or measurement issues make simple regression comparisons misleading. But IV designs are often fragile
-          in practice. Instruments can be weak, they can violate exclusion, and—most commonly—the same “plausibly exogenous”
-          source of variation is used across many studies to instrument many different regressors. Over time, that reuse
-          exposes a basic problem: if an instrument plausibly shifts multiple determinants of the outcome, it becomes hard
-          to defend the claim that it affects the outcome only through the one endogenous variable a given paper happens
-          to instrument.
-        </p>
+  Read full op-ed:
+  <a href="https://theconversation.com/the-colombian-border-is-one-of-the-biggest-obstacles-to-building-a-new-venezuela-272975"
+     target="_blank" rel="noopener">
+    https://theconversation.com/the-colombian-border-is-one-of-the-biggest-obstacles-to-building-a-new-venezuela-272975
+  </a>.
+</p>
 
-        <p>
-          This forthcoming paper in <em>International Studies Quarterly</em>,
-          <strong>“Sharpening Blunt Instruments: Exploiting Non-Linearities to Enhance Identification,”</strong>
-          offers a practical way to get more identification leverage out of common instruments—without treating them as
-          magically single-channel. The core idea is simple: stop assuming the first stage is linear. In many applications,
-          the relationship between an exogenous source of variation and an endogenous regressor is non-linear. If we model
-          that first stage flexibly (using splines or generalized additive models), the same source of exogenous variation
-          can generate <em>distinct</em> components of variation that are useful for identification.
-        </p>
+      </div>
+    </details>
+  </div>
+</article>
 
-        <div class="subhead">A key distinction: the source of variation is not the instrument</div>
 
-        <p>
-          A conceptual move in the paper is to separate the <strong>source of exogenous variation</strong> from the
-          <strong>instrument(s)</strong> used in estimation. Researchers often treat a variable <em>z</em> as “the instrument.”
-          But in practice, what powers identification is not <em>z</em> itself—it is the relationship between <em>z</em> and
-          the endogenous regressor(s). If that relationship is non-linear, then different functions of <em>z</em> can capture
-          different parts of the exogenous variation. Those parts can behave like distinct instruments, even though they
-          originate in the same underlying source.
-        </p>
-
-        <p>
-          This matters because it clarifies what many applied literatures are already doing implicitly: leveraging one
-          exogenous source to learn about multiple endogenous processes—sometimes responsibly, sometimes not. The paper’s
-          goal is to make that logic explicit, model it directly, and diagnose when it succeeds versus when it becomes
-          numerically fragile.
-        </p>
-
-        <div class="subhead">The method: flexible first stages + control functions (2SRI)</div>
-
-        <p>
-          Empirically, the paper develops a control-function approach based on
-          <strong>two-stage residual inclusion (2SRI)</strong>. The workflow is straightforward:
-        </p>
-
-        <ul>
-          <li><strong>Estimate flexible first stages</strong> for each endogenous variable as a function of the exogenous source <em>z</em> (e.g., splines / GAMs).</li>
-          <li><strong>Extract first-stage residuals</strong> (the endogenous components not explained by the exogenous source).</li>
-          <li><strong>Include those residuals in the outcome model</strong> to correct for endogeneity while allowing the first stage to be non-linear.</li>
-        </ul>
-
-        <p>
-          Modeling the first stage flexibly can improve identification in three ways. First, it can strengthen relevance
-          when the true relationship is non-linear. Second, it can reduce post-instrument bias when <em>z</em> plausibly
-          affects the outcome through multiple endogenous channels and those channels are modeled directly. Third, under
-          specific conditions, one exogenous source can support identification of more than one endogenous effect.
-        </p>
-
-        <div class="subhead">When can one source identify multiple endogenous effects?</div>
-
-        <p>
-          The paper does not claim that one instrument can identify everything. Instead, it specifies a condition:
-          identification of multiple endogenous effects is possible when the first-stage relationships generated by <em>z</em>
-          are <strong>functionally distinct</strong>—not just scaled copies of each other. If the fitted components are too
-          similar, the system becomes close to singular. In that case, estimates can become unstable, standard errors can
-          explode, and results can be driven by numerical artifacts rather than genuine identifying variation.
-        </p>
-
-        <p>
-          To make this transparent, the paper introduces diagnostics that treat multiple identification as an empirical
-          question rather than an assumption. The intuition is familiar from linear algebra: if the relevant first-stage
-          components are nearly collinear, you do not have enough independent variation to estimate multiple effects
-          precisely.
-        </p>
-
-        <div class="subhead">A diagnostic lens: near-degeneracy and precision loss</div>
-
-        <p>
-          A practical contribution of the paper is a screening approach for near-degeneracy, based on the conditioning of
-          the system implied by the first-stage fitted terms. Rather than asserting that multiple instruments “exist,” the
-          diagnostic asks whether the first-stage transformations of <em>z</em> are sufficiently independent to support the
-          second stage. When the system is poorly conditioned, inference can become sensitive to small perturbations—an
-          issue that is often invisible when researchers focus only on conventional first-stage strength metrics.
-        </p>
-
-        <p>
-          The broader point is methodological: in multi-endogenous IV problems, <em>relevance</em> is not just about whether
-          each first stage is strong on its own. It is also about whether the set of identifying components is jointly
-          informative—or whether they collapse onto essentially the same variation.
-        </p>
-
-        <div class="subhead">Why this matters for applied research</div>
-
-        <p>
-          This paper aims to be constructive for researchers who use IV in the real world, where clean instruments are
-          scarce. If your instrument is “too powerful” in the sense that it plausibly affects many things, the standard
-          response is often to abandon IV or to narrow the story until exclusion sounds believable. Our approach offers
-          another option: treat that complexity as a feature of the data-generating process and build it into the
-          identification strategy.
-        </p>
-
-        <p>
-          At the same time, flexible first stages and control functions do not eliminate the core burden of IV logic.
-          Researchers still need to think carefully about causal pathways and ensure that the model accounts for relevant
-          channels through which the exogenous source may affect the outcome. What the approach provides is a clearer
-          framework for doing that work—and diagnostics that help distinguish stable identification from near-collinearity.
-        </p>
-
-        <p>
-          If you use IV regularly—or review papers that do—this is the paper’s bottom line:
-          <strong>non-linear first stages are not a technical embellishment. They can be the difference between a weak or biased
-          IV design and one that is both more credible and more informative.</strong>
-        </p>
       </div>
 
     </div>
