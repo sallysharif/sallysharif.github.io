@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Teaching | Sally Sharif</title>
+  <title>Commentary | Sally Sharif</title>
 
   <style>
-    /* Base (match index) */
+    /* Base (match your site) */
     :root{
       --text:#111;
       --rule:#ddd;
+      --card:#eee;
     }
     body{
       margin:0;
@@ -51,98 +52,104 @@
       white-space:nowrap;
     }
 
-    /* Centered single-column layout */
+    /* Teaching-page-like centered layout */
     .wrap{
       max-width:1120px;
       margin:0 auto;
-      padding:30px 18px 40px 18px;
+      padding:34px 18px 44px 18px;
       display:flex;
       justify-content:center;
     }
     .content{
-      width:620px; /* match index main column */
+      width:820px; /* a bit wider than single-column, similar to teaching layout */
     }
 
-    /* Typography (match index) */
-    .section-title{
-      font-size:22px;
-      line-height:1.05;
-      margin:0 0 14px 0;
+    /* Title + intro */
+    .page-title{
+      font-size:24px;
+      line-height:1.08;
+      margin:0 0 12px 0;
       font-weight:700;
       letter-spacing:-0.2px;
+      text-align:left;
     }
-
-    p{
+    .intro{
       font-size:14.5px;
       line-height:1.62;
-      margin:0 0 14px 0;
+      margin:0 0 18px 0;
       text-align:justify;
       hyphens:auto;
     }
 
-    .subhead{
-      margin:24px 0 10px 0;
-      font-size:15px;
-      font-weight:700;
-      text-transform:uppercase;
-      letter-spacing:0.6px;
+    /* Two-column blog grid */
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:8px;
     }
 
-    .course{
-      padding:14px 0;
-      border-top:1px solid #eee;
+    /* Entry card (simple, teaching-like) */
+    .entry{
+      border:1px solid #eee;
+      border-radius:10px;
+      padding:16px;
+      box-shadow:0 1px 0 rgba(0,0,0,0.03);
+      background:#fff;
     }
-    .course:first-of-type{
-      border-top:none;
-      padding-top:0;
-    }
-    .course h3{
-      margin:0 0 6px 0;
+    .entry-title{
       font-size:16px;
       font-weight:700;
+      margin:0 0 6px 0;
+      line-height:1.25;
     }
-    .meta{
-      font-size:14px;
+    .entry-meta{
+      font-size:13.5px;
       color:#333;
-      margin:0 0 8px 0;
+      margin:0 0 10px 0;
+      line-height:1.45;
       text-align:left;
       hyphens:none;
     }
-
-    .list{
-      margin:0 0 14px 18px;
-      padding:0;
-    }
-    .list li{
+    .entry p{
       font-size:14.5px;
       line-height:1.62;
-      margin:6px 0;
+      margin:0 0 10px 0;
       text-align:justify;
       hyphens:auto;
     }
 
-    /* Teaching page photo */
-    .teaching-photo{
-      width:100%;
-      display:block;
-      border:1px solid var(--rule);
-      border-radius:10px;
-      margin:10px 0 10px 0;
+    /* “Read” toggle without links (click to expand) */
+    details{
+      margin-top:8px;
     }
-    .figure-caption{
-      font-size:13.5px;
-      line-height:1.4;
-      color:#333;
-      margin:8px 0 18px 0;
-      text-align:left;
-      hyphens:none;
+    summary{
+      cursor:pointer;
+      font-weight:700;
+      font-size:14px;
+      list-style:none;
+      display:inline-block;
+      padding:7px 10px;
+      border:1px solid #111;
+      border-radius:8px;
+      user-select:none;
     }
+    summary::-webkit-details-marker{ display:none; }
+
+    .full{
+      margin-top:12px;
+      border-top:1px solid #eee;
+      padding-top:12px;
+    }
+
+    /* Small typographic helpers */
+    em{font-style:italic;}
 
     /* Mobile */
     @media (max-width:900px){
-      .wrap{justify-content:flex-start;}
       .content{width:100%;}
-      .section-title{font-size:24px;}
+      .grid{grid-template-columns:1fr;}
+      .page-title{font-size:24px;}
     }
   </style>
 </head>
@@ -166,107 +173,89 @@
   <div class="wrap">
     <div class="content">
 
-      <img class="teaching-photo" src="assets/teaching.jpg" alt="Teaching in the classroom" />      
-      <h1 class="section-title">Teaching</h1>
-
-      <p>
-        My goal is to create a class environment in which students can build both normative and empirical foundations for
-        understanding and engaging with critical issues, such as power, justice, identity, equality, and freedom. I am committed
-        to developing students' ability to argue coherently, persuasively, and critically, while also introducing them to
-        cutting-edge research in the field. My teaching integrates both qualitative and quantitative methods, ensuring students
-        gain a comprehensive understanding of political inquiry.
+      <h1 class="page-title">Commentary</h1>
+      <p class="intro">
+        Short, accessible write-ups of my research. These posts are written for a general audience and focus on what the
+        argument is, what the evidence shows, and why it matters.
       </p>
 
-      <div class="subhead">At the University of British Columbia</div>
+      <div class="grid">
 
-      <div class="course">
-        <h3>International Conflict Management</h3>
-        <p class="meta">Spring 2024</p>
-        <p>
-          This course analyzes violent conflict as a strategic political process involving multiple actors, constituencies, and international interventions.
-          It begins with the conflict trap and state fragility, emphasizing why civil wars recur and why peacebuilding efforts fail.
-          Students examine policy tools for conflict prevention and management, including peace agreements, peacekeeping, and post-conflict programs such as DDR.
-          A central focus is causal mechanisms: how and why particular intervention strategies succeed or backfire across contexts.
-          The course combines theory, contemporary research, and case studies to build analytic skills for understanding conflict termination and recurrence.
-        </p>
+        <!-- ENTRY 1 (copy/paste this whole <article> block to add more posts) -->
+        <article class="entry">
+          <h2 class="entry-title">Sharpening Blunt Instruments: Exploiting Non-Linearities to Enhance Identification</h2>
+          <p class="entry-meta">Forthcoming in <em>International Studies Quarterly</em></p>
+
+          <p>
+            Instrumental variables can rescue causal claims when treatments are endogenous, but many IV designs are fragile:
+            instruments are reused, exclusion is hard to defend, and first stages are often misspecified as linear.
+            This paper argues that a common fix is hiding in plain sight—model the first stage flexibly.
+          </p>
+
+          <p>
+            When the relationship between an exogenous source of variation and an endogenous regressor is non-linear,
+            flexible first stages (splines / generalized additive models) can extract distinct components of variation.
+            Those components can strengthen relevance, reduce post-instrument bias, and—in some settings—help identify more
+            than one endogenous effect from the same source.
+          </p>
+
+          <details>
+            <summary>Read</summary>
+
+            <div class="full">
+              <p>
+                A key move in the paper is conceptual: distinguish the <em>source</em> of exogenous variation from the
+                <em>instrument(s)</em> used in estimation. Researchers often treat a variable <em>z</em> as “the instrument.”
+                But identification comes from how <em>z</em> maps into the endogenous variable(s). If that mapping is
+                non-linear, different functions of <em>z</em> can capture different parts of the exogenous variation.
+              </p>
+
+              <p>
+                Empirically, the paper develops a control-function approach based on <strong>two-stage residual inclusion (2SRI)</strong>:
+                estimate flexible first stages for each endogenous variable as a function of <em>z</em>, extract residuals,
+                then include those residuals in the outcome model to correct for endogeneity while keeping the first stage
+                non-linear. This approach improves relevance when linear approximations underfit, and it makes it easier to
+                model settings where the same exogenous source plausibly shifts multiple determinants of the outcome.
+              </p>
+
+              <p>
+                The paper also treats “multiple identification” as an empirical question. One source can only identify
+                multiple endogenous effects if the fitted first-stage components are <strong>functionally distinct</strong>.
+                If they are too similar, the system becomes near-singular: estimates turn unstable and inference becomes
+                sensitive to small perturbations. To address this, the paper introduces diagnostics that screen for
+                near-degeneracy and precision loss, making clear when the data support the identification claims and when
+                they do not.
+              </p>
+
+              <p>
+                The payoff is practical: in applied work, instruments are often “too powerful”—they plausibly affect many
+                things. Rather than relying on heroic exclusion stories or abandoning IV altogether, this approach models
+                the complexity directly, strengthens first stages when non-linearities matter, and provides diagnostics to
+                separate stable identification from near-collinearity.
+              </p>
+            </div>
+          </details>
+        </article>
+
+        <!-- ENTRY 2 PLACEHOLDER (duplicate this for more posts) -->
+        <article class="entry">
+          <h2 class="entry-title">Add your next entry here</h2>
+          <p class="entry-meta">Working paper / forthcoming / published</p>
+          <p>
+            Replace this text with a short teaser (2–3 sentences). Keep it punchy so the grid stays readable.
+          </p>
+          <details>
+            <summary>Read</summary>
+            <div class="full">
+              <p>
+                Paste the full post here. This expands in-place, so you can keep the page clean while still hosting
+                longer write-ups.
+              </p>
+            </div>
+          </details>
+        </article>
+
       </div>
-
-      <div class="course">
-        <h3>Armed Group Governance</h3>
-        <p class="meta">Spring 2024</p>
-        <p>
-          This course examines how armed groups govern and how some state-supported armed organizations operate in a grey zone adjacent to formal state authority.
-          We study groups that provide security, practice diplomacy, or implement public policy while evading conventional legal and institutional constraints.
-          Students engage theories of state formation, rebel governance, and political violence to explain variation in armed groups’ strategies and repertoires.
-          The course emphasizes conflicts with internationalized dimensions and considers transitions from armed actors to state actors after rebel victory or coups.
-          The goal is to develop a systematic framework for analyzing how armed groups exercise power and with what consequences.
-        </p>
-      </div>
-
-      <div class="course">
-        <h3>Political Violence, State Fragility, and State-Building</h3>
-        <p class="meta">Fall 2023</p>
-        <p>
-          This course explores the causes and consequences of state fragility, focusing on how political violence erodes the capacity and legitimacy of state institutions.
-          Through cases across regions, we examine what states are expected to do, what it means for them to be fragile or failing, and why fragility emerges.
-          We analyze domestic and international responses, including third-party interventions, reconstruction efforts, and strategies for rebuilding democratic institutions.
-          The course also engages debates on whether external actors can promote durable governance and social reconciliation after civil conflict.
-          We conclude by evaluating state-building as a pathway to reducing political violence and sustaining peace.
-        </p>
-      </div>
-
-      <div class="course">
-        <h3>Quantitative Methods in Political Science</h3>
-        <p class="meta">Spring 2025</p>
-        <p>
-          This course introduces statistical inference and data analysis for political and policy questions, with an emphasis on
-          building programming skills from scratch. Students learn how to summarize and visualize data, develop and interpret
-          regression-based models, and evaluate uncertainty and evidence. The course is structured around short, frequent assignments
-          designed to develop practical fluency in coding and statistical reasoning. Substantive applications include elections, political violence,
-          discrimination, and policy evaluation. By the end, students can design and execute a basic data-driven research project.
-        </p>
-      </div>
-
-      <div class="course">
-        <h3>Politics and Government of Latin America</h3>
-        <p class="meta">Fall 2025</p>
-        <p>
-          This course surveys Latin America’s major political and economic challenges through a comparative lens.
-          We examine the region’s distinct trajectories of state formation, development, and inequality, as well as
-          democratic breakdown and transitions back to competitive politics. Topics include corruption and clientelism,
-          human rights and political violence, transitional justice, and the war on drugs. The course also highlights
-          citizen mobilization around race, gender, and LGBTQ rights, and situates Latin American politics in a global context,
-          including relationships with the United States and Canada.
-        </p>
-      </div>
-
-      <div class="course">
-        <h3>Introduction to Comparative Politics</h3>
-        <p class="meta">Fall 2024</p>
-        <p>
-          This course introduces core themes in comparative politics by examining how political institutions, development patterns,
-          social structures, and violence vary across countries. Students learn how comparativists build and test arguments using cases,
-          concepts, and evidence. We study the formation and functioning of states, regime types, and how power is obtained and maintained.
-          The course also engages debates on culture, ethnicity, ideology, and political economy, and asks when broad concepts travel well across contexts.
-          Throughout, students connect contemporary events to theoretical frameworks and comparative methods.
-        </p>
-      </div>
-
-      <div class="subhead">At Simon Fraser University</div>
-      <ul class="list">
-        <li>Research Methods in International Studies (Fall 2023)</li>
-        <li>State Failure and Reconstruction (Summer 2023)</li>
-      </ul>
-
-      <div class="subhead">As Teaching Assistant at the University of Michigan’s ICPSR Summer Program</div>
-      <ul class="list">
-        <li>Causal Inference for the Social Sciences (Jake Bowers and Thomas Leavitt), 2023</li>
-        <li>Causal Inference for the Social Sciences II (Sebastian Calonico and Gonzalo Vazquez-Bare), 2023</li>
-        <li>Regression III — Advanced Methods (David Armstrong), 2022</li>
-        <li>Simultaneous Equation Models (Sandy Marquart-Pyatt), 2021</li>
-        <li>Causal Inference (Jake Bowers), 2020</li>
-        <li>Maximum Likelihood Estimation (Robert Lupton), 2020</li>
-      </ul>
 
     </div>
   </div>
