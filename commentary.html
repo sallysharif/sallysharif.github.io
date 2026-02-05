@@ -228,20 +228,58 @@
               </p>
 
               <p>
-                The payoff is practical: in applied work, instruments often affect many
-                things. Rather than relying on implausible exclusion justifications or abandoning IV altogether, this approach models
-                the complexity directly, strengthens first stages when non-linearities matter, and provides diagnostics to
-                separate stable identification from near-collinearity.
-              </p>
+Empirically, the paper shows that exploiting non-linearities is not just a theoretical
+curiosity but materially changes what researchers can learn from data. In Monte Carlo
+simulations, we demonstrate that standard IV strategies fail when a single source of
+exogenous variation affects multiple endogenous variables, a situation that produces
+post-instrument bias even when first-stage F-statistics are large. By contrast, when the
+first stage is modeled flexibly, the same source of variation can recover unbiased causal
+effects, provided the non-linear components are functionally distinct.
+</p>
+
+<p>
+A key result from the simulations is that the amount of non-linearity required for
+identification is often modest. Even slight departures from linearity, imperceptible in
+linear diagnostics, are sufficient to identify multiple endogenous effects in large samples.
+</p>
+
+<p>
+We illustrate these ideas in two applied settings. First, we revisit prominent work on
+democracy aid and democratization. Modeling the first stage non-linearly substantially
+strengthens instrument relevance and reveals that a single donor-based instrument predicts
+multiple endogenous variables. Once all resulting pathways are accounted for using a
+control-function approach, the apparent causal effects of democracy aid attenuate and
+lose statistical significance. Taken together with recent replication work, the evidence
+suggests that more democracy aid from a larger set of donors does not robustly cause
+democratic improvement.
+</p>
+
+<p>
+Second, we apply the framework to economic growth models that use population size as a
+common instrument for trade, trade openness, foreign aid, foreign direct investment, and export
+sophistication. Flexible first stages uncover pronounced non-linear relationships between
+population and these variables, relationships that linear specifications miss entirely.
+However, diagnostic tests reveal that some of these first-stage components are too similar
+to support simultaneous identification. This allows us to show when population is an
+untenable instrument and when combining conceptually related variables can restore
+numerical stability.
+</p>
+
+<p>
+Across applications, we show that flexible first stages can
+strengthen weak instruments, clarify when exclusion restrictions fail, and sometimes
+recover multiple causal effects from a single source of variation. Just as importantly,
+the diagnostics make clear when the data do not support such claims. Rather than treating
+instrument validity as a matter of faith, the approach turns it into an empirical question.
+</p>
+
             </div>
           </details>
         </article>
 
         <!-- ENTRY 2 PLACEHOLDER (duplicate this for more posts) -->
-       <article class="entry" aria-labelledby="op1-title">
-  <header class="entry-head">
-    <h2 class="entry-title" id="op1-title">The Colombian border is one of the biggest obstacles to building a new Venezuela</h2>
-  </header>
+              <article class="entry">
+          <h2 class="entry-title">The Colombian Border is One of the Biggest Obstacles to Building a New Venezuela</h2>
 
   <div class="entry-body">
     <p>
