@@ -32,7 +32,7 @@
     }
     .nav .brand{
       font-weight:700;
-      font-size:18px;   /* BIGGER NAME */
+      font-size:18px;
       text-decoration:none;
       color:var(--text);
       white-space:nowrap;
@@ -51,7 +51,7 @@
       white-space:nowrap;
     }
 
-    /* Centered single-column layout (match index main column) */
+    /* Centered single-column layout (match teaching) */
     .wrap{
       max-width:1120px;
       margin:0 auto;
@@ -60,10 +60,10 @@
       justify-content:center;
     }
     .content{
-      width:620px;   /* match index main content width */
+      width:620px; /* match index/teaching main column */
     }
 
-    /* Headings + text (match index) */
+    /* Typography (match teaching) */
     .section-title{
       font-size:22px;
       line-height:1.05;
@@ -71,6 +71,7 @@
       font-weight:700;
       letter-spacing:-0.2px;
     }
+
     p{
       font-size:14.5px;
       line-height:1.62;
@@ -93,19 +94,39 @@
       letter-spacing:0.6px;
     }
 
-    /* Cards (scaled down to index typography) */
+    /* Top photo (match teaching page image style) */
+    .page-photo{
+      width:100%;
+      display:block;
+      border:1px solid var(--rule);
+      border-radius:10px;
+      margin:10px 0 10px 0;
+    }
+    .figure-caption{
+      font-size:13.5px;
+      line-height:1.4;
+      color:#333;
+      margin:8px 0 18px 0;
+      text-align:left;
+      hyphens:none;
+    }
+
+    /* Cards */
     .card{
       border:1px solid #eee;
       border-radius:10px;
       padding:16px;
       margin:16px 0;
       box-shadow:0 1px 0 rgba(0,0,0,0.03);
+      background:#fff;
     }
     .dataset-title{
       font-size:16px;
       font-weight:700;
       margin:0 0 6px 0;
       line-height:1.25;
+      text-align:left;
+      hyphens:none;
     }
     .dataset-meta{
       font-size:14px;
@@ -148,6 +169,7 @@
       border:1px solid #f0f0f0;
       border-radius:8px;
       padding:10px 12px;
+      background:#fff;
     }
     .fact .k{
       font-size:12px;
@@ -223,6 +245,10 @@
 
       <h1 class="section-title">Datasets</h1>
 
+      <!-- NEW: top image like Teaching page -->
+      <img class="page-photo" src="assets/disarmament.jpg" alt="Disarmament and demobilization" />
+      <p class="figure-caption">Original data on disarmament, demobilization, and reintegration programs worldwide.</p>
+
       <p>
         My research combines original datasets with transparent documentation and replication materials.
         Below are datasets that support my published and ongoing work. For access, citation guidance, and updates,
@@ -234,14 +260,6 @@
         <p class="dataset-meta">
           Global, program–year dataset on DDR design, implementation, and relapse outcomes.
         </p>
-
-        <div class="btnrow">
-          <!-- Replace # with your Dataverse / OSF link when ready -->
-          <a class="btn" href="#" target="_blank" rel="noopener">Download dataset</a>
-          <a class="btn secondary" href="#" target="_blank" rel="noopener">Codebook</a>
-          <a class="btn secondary" href="#" target="_blank" rel="noopener">Replication files</a>
-        </div>
-
         <div class="facts">
           <div class="fact">
             <p class="k">Coverage</p>
