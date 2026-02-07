@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Datasets | Sally Sharif</title>
+  <title>Fieldwork | Sally Sharif</title>
 
   <style>
-    /* Base (match index) */
+    /* Base (match your site) */
     :root{
       --text:#111;
       --rule:#ddd;
@@ -20,7 +20,7 @@
       -moz-osx-font-smoothing:grayscale;
     }
 
-    /* Nav (match index) */
+    /* Nav (match index/teaching) */
     .nav{
       display:flex;
       justify-content:space-between;
@@ -32,7 +32,7 @@
     }
     .nav .brand{
       font-weight:700;
-      font-size:18px;   /* BIGGER NAME */
+      font-size:18px;
       text-decoration:none;
       color:var(--text);
       white-space:nowrap;
@@ -51,7 +51,7 @@
       white-space:nowrap;
     }
 
-    /* Centered single-column layout (match index main column) */
+    /* Centered single-column layout (match teaching) */
     .wrap{
       max-width:1120px;
       margin:0 auto;
@@ -60,10 +60,10 @@
       justify-content:center;
     }
     .content{
-      width:620px;   /* match index main content width */
+      width:620px;
     }
 
-    /* Headings + text (match index) */
+    /* Typography */
     .section-title{
       font-size:22px;
       line-height:1.05;
@@ -83,89 +83,52 @@
       text-decoration:underline;
       text-underline-offset:2px;
     }
-    em{font-style:italic;}
+
+    /* Photo group (two horizontal + one vertical) */
+    .photo-row{
+      display:flex;
+      gap:12px;
+      align-items:flex-end; /* makes the “tall” middle photo feel centered */
+      margin:10px 0 10px 0;
+    }
+    .photo{
+      border:1px solid var(--rule);
+      border-radius:10px;
+      overflow:hidden;
+      background:#fff;
+      flex:1 1 0;
+    }
+    .photo img{
+      width:100%;
+      display:block;
+      object-fit:cover;
+    }
+
+    /* Heights: left/right horizontal, middle vertical */
+    .photo.horz img{ height:210px; }
+    .photo.vert{
+      flex:0.82 1 0; /* slightly narrower than the horizontals */
+    }
+    .photo.vert img{ height:450px; }
+
+    .figure-caption{
+      font-size:13.5px;
+      line-height:1.4;
+      color:#333;
+      margin:8px 0 18px 0;
+      text-align:left;
+      hyphens:none;
+    }
 
     .subhead{
-      margin:24px 0 10px 0;
+      margin:22px 0 10px 0;
       font-size:15px;
       font-weight:700;
       text-transform:uppercase;
       letter-spacing:0.6px;
-    }
-
-    /* Cards (scaled down to index typography) */
-    .card{
-      border:1px solid #eee;
-      border-radius:10px;
-      padding:16px;
-      margin:16px 0;
-      box-shadow:0 1px 0 rgba(0,0,0,0.03);
-    }
-    .dataset-title{
-      font-size:16px;
-      font-weight:700;
-      margin:0 0 6px 0;
-      line-height:1.25;
-    }
-    .dataset-meta{
-      font-size:14px;
-      color:#333;
-      margin:0 0 12px 0;
-      line-height:1.55;
       text-align:left;
       hyphens:none;
     }
-
-    .btnrow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin:10px 0 4px 0;
-    }
-    .btn{
-      display:inline-block;
-      padding:8px 10px;
-      border:1px solid #111;
-      border-radius:8px;
-      text-decoration:none;
-      color:#111;
-      font-weight:700;
-      font-size:14px;
-    }
-    .btn.secondary{
-      border-color:#bbb;
-      font-weight:600;
-      color:#111;
-    }
-
-    .facts{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-      margin:12px 0 0 0;
-    }
-    .fact{
-      border:1px solid #f0f0f0;
-      border-radius:8px;
-      padding:10px 12px;
-    }
-    .fact .k{
-      font-size:12px;
-      text-transform:uppercase;
-      letter-spacing:.03em;
-      color:#555;
-      margin:0 0 3px 0;
-      text-align:left;
-      hyphens:none;
-    }
-    .fact .v{
-      font-size:14.5px;
-      margin:0;
-      line-height:1.5;
-      text-align:left;
-      hyphens:auto;
-    }
-
     ul{
       margin:0 0 14px 18px;
       padding:0;
@@ -174,22 +137,8 @@
       font-size:14.5px;
       line-height:1.62;
       margin:6px 0;
-      text-align:justify;
-      hyphens:auto;
-    }
-
-    .note{
-      font-size:14px;
-      color:#333;
-      margin-top:8px;
-      line-height:1.55;
       text-align:left;
-      hyphens:none;
-    }
-    .hr{
-      height:1px;
-      background:#eee;
-      margin:18px 0;
+      hyphens:auto;
     }
 
     /* Mobile */
@@ -197,7 +146,13 @@
       .wrap{justify-content:flex-start;}
       .content{width:100%;}
       .section-title{font-size:24px;}
-      .facts{grid-template-columns:1fr;}
+      .photo-row{
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .photo.horz img{ height:230px; }
+      .photo.vert{ flex:1 1 auto; }
+      .photo.vert img{ height:320px; }
     }
   </style>
 </head>
@@ -224,8 +179,64 @@
       <h1 class="section-title">Fieldwork</h1>
 
       <p>
-        Page under construction
+        I have done extensive field research in Latin America and the Middle East. In Colombia, I interviewed 121
+        ex-combatants and former commanders following the 2016 Peace Agreement with the Revolutionary Armed Forces of
+        Colombia (FARC). In 2021-2022, I engaged in participation observation in border regions of Catatumbo, Pacifico
+        Nariñense, and Urabá to understand the complexities of post-conflict violence reduction and interviewed 51 social
+        leaders involved in peacebuilding projects. This page includes images of these informative experiences.
       </p>
+
+      <!-- Photos: update filenames if yours differ -->
+      <div class="photo-row">
+        <div class="photo horz">
+          <img src="assets/politician1.jpg" alt="Interview" />
+        </div>
+
+        <div class="photo vert">
+          <img src="assets/politician2.jpg" alt="Meeting" />
+        </div>
+
+        <div class="photo horz">
+          <img src="assets/politician3.jpg" alt="Conversation" />
+        </div>
+      </div>
+
+      <p class="figure-caption">
+        Fieldwork vignettes from Colombia: interviews and participant observation that connect national-level political
+        trajectories to local reintegration realities.
+      </p>
+
+      <div class="subhead">What these photos capture</div>
+
+      <p>
+        A core empirical insight runs through my work on post-conflict armed
+        organization: structures, bonds, and norms created among combatants during war do not “disappear” after demobilization. 
+        Instead, they often reconfigure through a mix
+        of <em>horizontal ties</em> (peer-to-peer coordination among mid-level cadres and local networks) and
+        <em>vertical ties</em> (linkages between national leadership, political representatives, and on-the-ground
+        ex-combatants). These ties shape how former combatants interpret the peace, how authority travels after
+        demobilization, and why security outcomes vary across regions.
+      </p>
+
+      <p>
+        In particular, the fieldwork informs how I conceptualize the relationship between FARC top leaders - some of whom
+        transitioned into formal political roles within the FARC party and the Colombian congress - and the ex-combatants
+        navigating reintegration in the field. The leadership’s move into institutional politics can generate new forms of
+        representation and access, but it can also produce distance: differences in information, incentives, and exposure
+        to risk between those with national-level political positions and those living daily with local threats.
+      </p>
+
+      <div class="subhead">Research articles that draw on this fieldwork</div>
+      <ul>
+        <li>
+          <a href="https://doi.org/10.1080/13533312.2022.2128337" target="_blank" rel="noopener">https://doi.org/10.1080/13533312.2022.2128337</a>
+          (Can the Rebel Body Function without its Visible Heads? The Role of Mid-Level Commanders in Peacebuilding)
+        </li>
+        <li>
+          <a href="https://doi.org/10.1080/09546553.2021.2017895" target="_blank" rel="noopener">https://doi.org/10.1080/09546553.2021.2017895</a>
+          (How Wartime Bonds Affect Ex-Combatant Political Attitudes: A Natural Experiment with the FARC)
+        </li>
+      </ul>
 
     </div>
   </div>
