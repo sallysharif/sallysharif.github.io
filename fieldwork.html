@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Datasets | Sally Sharif</title>
+
+  <style>
+    /* Base (match index) */
+    :root{
+      --text:#111;
+      --rule:#ddd;
+    }
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:14px;
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* Nav (match index) */
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      border-bottom:1px solid var(--rule);
+      padding:12px 22px;
+      gap:10px 18px;
+    }
+    .nav .brand{
+      font-weight:700;
+      font-size:18px;   /* BIGGER NAME */
+      text-decoration:none;
+      color:var(--text);
+      white-space:nowrap;
+    }
+    .nav .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+    }
+    .nav .links a{
+      padding:6px 10px;
+      text-decoration:none;
+      color:var(--text);
+      font-weight:600;
+      font-size:15px;
+      white-space:nowrap;
+    }
+
+    /* Centered single-column layout (match index main column) */
+    .wrap{
+      max-width:1120px;
+      margin:0 auto;
+      padding:30px 18px 40px 18px;
+      display:flex;
+      justify-content:center;
+    }
+    .content{
+      width:620px;   /* match index main content width */
+    }
+
+    /* Headings + text (match index) */
+    .section-title{
+      font-size:22px;
+      line-height:1.05;
+      margin:0 0 14px 0;
+      font-weight:700;
+      letter-spacing:-0.2px;
+    }
+    p{
+      font-size:14.5px;
+      line-height:1.62;
+      margin:0 0 14px 0;
+      text-align:justify;
+      hyphens:auto;
+    }
+    a{
+      color:var(--text);
+      text-decoration:underline;
+      text-underline-offset:2px;
+    }
+    em{font-style:italic;}
+
+    .subhead{
+      margin:24px 0 10px 0;
+      font-size:15px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:0.6px;
+    }
+
+    /* Cards (scaled down to index typography) */
+    .card{
+      border:1px solid #eee;
+      border-radius:10px;
+      padding:16px;
+      margin:16px 0;
+      box-shadow:0 1px 0 rgba(0,0,0,0.03);
+    }
+    .dataset-title{
+      font-size:16px;
+      font-weight:700;
+      margin:0 0 6px 0;
+      line-height:1.25;
+    }
+    .dataset-meta{
+      font-size:14px;
+      color:#333;
+      margin:0 0 12px 0;
+      line-height:1.55;
+      text-align:left;
+      hyphens:none;
+    }
+
+    .btnrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:10px 0 4px 0;
+    }
+    .btn{
+      display:inline-block;
+      padding:8px 10px;
+      border:1px solid #111;
+      border-radius:8px;
+      text-decoration:none;
+      color:#111;
+      font-weight:700;
+      font-size:14px;
+    }
+    .btn.secondary{
+      border-color:#bbb;
+      font-weight:600;
+      color:#111;
+    }
+
+    .facts{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin:12px 0 0 0;
+    }
+    .fact{
+      border:1px solid #f0f0f0;
+      border-radius:8px;
+      padding:10px 12px;
+    }
+    .fact .k{
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.03em;
+      color:#555;
+      margin:0 0 3px 0;
+      text-align:left;
+      hyphens:none;
+    }
+    .fact .v{
+      font-size:14.5px;
+      margin:0;
+      line-height:1.5;
+      text-align:left;
+      hyphens:auto;
+    }
+
+    ul{
+      margin:0 0 14px 18px;
+      padding:0;
+    }
+    li{
+      font-size:14.5px;
+      line-height:1.62;
+      margin:6px 0;
+      text-align:justify;
+      hyphens:auto;
+    }
+
+    .note{
+      font-size:14px;
+      color:#333;
+      margin-top:8px;
+      line-height:1.55;
+      text-align:left;
+      hyphens:none;
+    }
+    .hr{
+      height:1px;
+      background:#eee;
+      margin:18px 0;
+    }
+
+    /* Mobile */
+    @media (max-width:900px){
+      .wrap{justify-content:flex-start;}
+      .content{width:100%;}
+      .section-title{font-size:24px;}
+      .facts{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="nav">
+    <a class="brand" href="index.html">Sally Sharif</a>
+
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="fieldwork.html">Fieldwork</a>
+      <a href="datasets.html">Datasets</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="commentary.html">Commentary</a>
+      <a href="Sharif_CV.pdf" target="_blank" rel="noopener">CV</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="content">
+
+      <h1 class="section-title">Fieldwork</h1>
+
+      <p>
+        Page under construction
+      </p>
+
+    </div>
+  </div>
+
+</body>
+</html>
