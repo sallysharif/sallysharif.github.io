@@ -9,7 +9,7 @@
     :root{
       --text:#111;
       --rule:#ddd;
-      --frame:#f6f6f6; /* subtle backdrop so "contain" looks intentional */
+      --frame:#f6f6f6;
     }
 
     body{
@@ -52,16 +52,16 @@
       white-space:nowrap;
     }
 
-    /* Layout: wider text column */
+    /* Layout: narrower (less wide) */
     .wrap{
-      max-width:1220px;
+      max-width:1120px;
       margin:0 auto;
       padding:30px 18px 40px 18px;
       display:flex;
       justify-content:center;
     }
     .content{
-      width:min(920px, 100%);
+      width:min(720px, 100%); /* key change: tighter column */
     }
 
     /* Typography */
@@ -85,48 +85,61 @@
       text-underline-offset:2px;
     }
 
-  /* Photo group (two horizontal + one vertical) */
-.photo-row{
-  display:flex;
-  gap:12px;
-  align-items:stretch;   /* KEY: all frames align cleanly */
-  margin:10px 0 10px 0;
-}
+    /* Two-photo row (same size + aligned) */
+    .photo-row{
+      display:flex;
+      gap:14px;
+      align-items:stretch;
+      margin:12px 0 14px 0;
+    }
+    .photo{
+      border:1px solid var(--rule);
+      border-radius:12px;
+      overflow:hidden;
+      background:var(--frame);
+      flex:1 1 0;
+      height:260px;              /* identical frames */
+      display:flex;
+    }
+    .photo img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;          /* same crop behavior for both */
+      object-position:center;
+    }
 
-.photo{
-  border:1px solid var(--rule);
-  border-radius:12px;
-  overflow:hidden;
-  background:#fff;
-  flex:1 1 0;
-  display:flex;          /* allows img to stretch perfectly */
-}
+    .subhead{
+      margin:22px 0 10px 0;
+      font-size:15px;
+      font-weight:700;
+      letter-spacing:0.2px;
+      text-align:left;
+      hyphens:none;
+      text-transform:none;
+    }
+    ul{
+      margin:0 0 14px 18px;
+      padding:0;
+    }
+    li{
+      font-size:14.5px;
+      line-height:1.62;
+      margin:6px 0;
+      text-align:left;
+      hyphens:auto;
+    }
 
-/* Define frame heights (cards), not image heights */
-.photo.horz{ height:230px; }
-.photo.vert{
-  height:480px;
-  flex:0.82 1 0;         /* slightly narrower center frame */
-}
-
-/* Make images fill frames */
-.photo img{
-  width:100%;
-  height:100%;
-  display:block;
-  object-fit:cover;
-}
-
-/* Mobile: stack and normalize heights */
-@media (max-width:900px){
-  .photo-row{
-    flex-direction:column;
-    gap:12px;
-  }
-  .photo.horz{ height:240px; }
-  .photo.vert{ height:320px; flex:1 1 auto; }
-}
-
+    /* Mobile */
+    @media (max-width:900px){
+      .photo-row{
+        flex-direction:column;
+        gap:12px;
+      }
+      .photo{
+        height:280px;
+      }
+    }
   </style>
 </head>
 
@@ -152,24 +165,21 @@
       <h1 class="section-title">Fieldwork</h1>
 
       <p>
-        My research is data-driven and grounded in fieldwork. I combine original datasets with interviews 
-        and participant observation in Latin America and the Middle East to understand how armed 
+        My research is data-driven and grounded in fieldwork. I combine original datasets with interviews
+        and participant observation in Latin America and the Middle East to understand how armed
         groups reorganize after war and why security outcomes vary across regions.
       </p>
 
       <div class="photo-row">
-        <div class="photo horz">
+        <div class="photo">
           <img src="assets/politician1.jpg" alt="Interview" />
         </div>
 
-        <div class="photo vert">
+        <div class="photo">
           <img src="assets/politician2.jpg" alt="Meeting" />
         </div>
-
-        <div class="photo horz">
-          <img src="assets/politician3.jpg" alt="Conversation" />
-        </div>
       </div>
+
       <p>
         A core empirical insight runs through my work on post-conflict armed
         organization: structures, bonds, and norms created among combatants during war do not “disappear” after demobilization.
