@@ -85,76 +85,48 @@
       text-underline-offset:2px;
     }
 
-    /* Photo group */
-    .photo-row{
-      display:flex;
-      gap:14px;
-      align-items:stretch;
-      margin:14px 0 12px 0;
-    }
-
-    /* Frame controls the size; image is contained (no cropping) */
-    .photo{
-      border:1px solid var(--rule);
-      border-radius:12px;
-      overflow:hidden;
-      background:var(--frame);
-      flex:1 1 0;
-      display:flex;
-    }
-
-    /* Set consistent “frame” heights via the container, not the image */
-    .photo.horz{
-      height:240px;          /* was 210; gives more breathing room */
-    }
-    .photo.vert{
-      flex:0.85 1 0;         /* slightly narrower than horizontals */
-      height:360px;          /* shorter than before (450) to match your edited middle */
-    }
-
-    /* No crop */
-    .photo img{
-      width:100%;
-      height:100%;
-      display:block;
-      object-fit:contain;     /* key change: prevents cutting */
-      object-position:center;
-    }
-.subhead{
-  margin:22px 0 10px 0;
-  font-size:15px;
-  font-weight:700;
-  letter-spacing:0.2px;
-  text-align:left;
-  hyphens:none;
-  text-transform:none; /* key change */
+  /* Photo group (two horizontal + one vertical) */
+.photo-row{
+  display:flex;
+  gap:12px;
+  align-items:stretch;   /* KEY: all frames align cleanly */
+  margin:10px 0 10px 0;
 }
-    ul{
-      margin:0 0 14px 18px;
-      padding:0;
-    }
-    li{
-      font-size:14.5px;
-      line-height:1.62;
-      margin:6px 0;
-      text-align:left;
-      hyphens:auto;
-    }
 
-    /* Mobile */
-    @media (max-width:900px){
-      .wrap{justify-content:flex-start;}
-      .section-title{font-size:24px;}
-      .photo-row{
-        flex-direction:column;
-        align-items:stretch;
-      }
-      .photo.horz{ height:260px; }
-      .photo.vert{
-        flex:1 1 auto;
-        height:340px;
-      }
-    }
+.photo{
+  border:1px solid var(--rule);
+  border-radius:12px;
+  overflow:hidden;
+  background:#fff;
+  flex:1 1 0;
+  display:flex;          /* allows img to stretch perfectly */
+}
+
+/* Define frame heights (cards), not image heights */
+.photo.horz{ height:230px; }
+.photo.vert{
+  height:480px;
+  flex:0.82 1 0;         /* slightly narrower center frame */
+}
+
+/* Make images fill frames */
+.photo img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+/* Mobile: stack and normalize heights */
+@media (max-width:900px){
+  .photo-row{
+    flex-direction:column;
+    gap:12px;
+  }
+  .photo.horz{ height:240px; }
+  .photo.vert{ height:320px; flex:1 1 auto; }
+}
+
   </style>
 </head>
 
