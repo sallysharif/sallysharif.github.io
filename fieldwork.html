@@ -52,7 +52,7 @@
       white-space:nowrap;
     }
 
-    /* Layout: narrower (less wide) */
+    /* Layout */
     .wrap{
       max-width:1120px;
       margin:0 auto;
@@ -61,7 +61,7 @@
       justify-content:center;
     }
     .content{
-      width:min(720px, 100%); /* key change: tighter column */
+      width:min(720px, 100%);
     }
 
     /* Typography */
@@ -83,6 +83,7 @@
       color:var(--text);
       text-decoration:underline;
       text-underline-offset:2px;
+      word-break:break-word;
     }
 
     /* Two-photo row (same size + aligned) */
@@ -92,21 +93,25 @@
       align-items:stretch;
       margin:12px 0 14px 0;
     }
+
+    /* Mobile-safe image framing (fixes “photos don’t show” on some phones) */
     .photo{
       border:1px solid var(--rule);
       border-radius:12px;
       overflow:hidden;
       background:var(--frame);
       flex:1 1 0;
-      height:260px;              /* identical frames */
-      display:flex;
+      height:260px;
+      position:relative;
     }
     .photo img{
+      position:absolute;
+      inset:0;
       width:100%;
       height:100%;
-      display:block;
-      object-fit:cover;          /* same crop behavior for both */
+      object-fit:cover;
       object-position:center;
+      display:block;
     }
 
     .subhead{
@@ -170,29 +175,40 @@
         groups reorganize after war and why security outcomes vary across regions.
       </p>
 
+      <!-- Set 1: political leaders -->
       <div class="photo-row">
         <div class="photo">
           <img src="assets/politician1.jpg" alt="Interview" />
         </div>
-
         <div class="photo">
           <img src="assets/politician2.jpg" alt="Meeting" />
         </div>
       </div>
 
       <p>
-        A core empirical insight runs through my work on post-conflict armed
-        organization: structures, bonds, and norms created among combatants during war do not “disappear” after demobilization.
-        Instead, they often reconfigure through a mix
-        of <em>horizontal ties</em> (peer-to-peer coordination among mid-level cadres and local networks) and
-        <em>vertical ties</em> (linkages between national leadership, political representatives, and on-the-ground
-        ex-combatants). 
-        Interviews with FARC party leaders, FARC members of Congress, and the Colombian President have informed how
-        I conceptualize the post-conflict network. These ties shape how former combatants interpret the peace, how authority travels after
-        demobilization, and why security outcomes vary across regions.
+        A core empirical insight runs through my work on post-conflict armed organization: structures, bonds, and norms created
+        during war do not disappear after demobilization. They reconfigure through horizontal ties among local networks and vertical
+        ties that connect leaders, political representatives, and ex-combatants in the field. Interviews with political and institutional
+        actors inform how I conceptualize these post-conflict networks and their consequences for security.
       </p>
 
-      <div class="subhead">Research articles that draw on this fieldwork</div>
+      <!-- Set 2: ex-combatants -->
+      <div class="photo-row">
+        <div class="photo">
+          <img src="assets/excombatant1.jpg" alt="Field interview with ex-combatants" />
+        </div>
+        <div class="photo">
+          <img src="assets/excombatant2.jpg" alt="Fieldwork site visit and interviews" />
+        </div>
+      </div>
+
+      <p>
+        In Colombia, I interviewed 130 ex-combatants of the FARC to reconstruct how demobilization and reintegration unfolded on the
+        ground, identify the sources of post-accord insecurity, and trace how organizational ties and local threats shape compliance,
+        remobilization risks, and trust in state protection.
+      </p>
+
+      <div class="subhead">Research articles and commentary that draw on this fieldwork</div>
       <ul>
         <li>
           <a href="https://doi.org/10.1080/13533312.2022.2128337" target="_blank" rel="noopener">https://doi.org/10.1080/13533312.2022.2128337</a>
@@ -201,6 +217,14 @@
         <li>
           <a href="https://doi.org/10.1080/09546553.2021.2017895" target="_blank" rel="noopener">https://doi.org/10.1080/09546553.2021.2017895</a>
           (How Wartime Bonds Affect Ex-Combatant Political Attitudes: A Natural Experiment with the FARC)
+        </li>
+        <li>
+          <a href="https://politicalviolenceataglance.org/2019/09/16/the-art-of-winning-a-peace-agreement-the-case-of-the-farc/" target="_blank" rel="noopener">https://politicalviolenceataglance.org/2019/09/16/the-art-of-winning-a-peace-agreement-the-case-of-the-farc/</a>
+          (The Art of Winning a Peace Agreement: The Case of the FARC)
+        </li>
+        <li>
+          <a href="https://doi.org/10.7274/np193775f86" target="_blank" rel="noopener">https://doi.org/10.7274/np193775f86</a>
+          (How to Canton Ex-Combatants: Lessons from Peacebuilding with the FARC)
         </li>
       </ul>
 
