@@ -114,6 +114,14 @@
       display:block;
     }
 
+    .photo.photo-wide{
+  flex: 1 1 100%;
+  height:320px;
+}
+.photo.photo-wide img{
+  object-fit:contain; /* prevents cropping for the map/regions image */
+}
+
     .subhead{
       margin:22px 0 10px 0;
       font-size:15px;
