@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -86,7 +87,7 @@
       word-break:break-word;
     }
 
-    /* Two-photo row (same size + aligned) */
+    /* Two-photo row: same size and aligned */
     .photo-row{
       display:flex;
       gap:14px;
@@ -94,32 +95,32 @@
       margin:12px 0 14px 0;
     }
 
-.photo{
-  border:1px solid var(--rule);
-  border-radius:12px;
-  overflow:hidden;
-  background:var(--frame);
-  flex:1 1 0;
-  height:260px;
-  display:flex;          /* key change */
-}
+    .photo{
+      border:1px solid var(--rule);
+      border-radius:12px;
+      overflow:hidden;
+      background:var(--frame);
+      flex:1 1 0;
+      height:260px;
+      display:flex;
+    }
 
-.photo img{
-  width:100%;
-  height:100%;
-  display:block;
-  object-fit:cover;
-  object-position:center;
-}
-
+    .photo img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      object-position:center;
+    }
 
     .photo.photo-wide{
-  flex: 1 1 100%;
-  height:320px;
-}
-.photo.photo-wide img{
-  object-fit:contain; /* prevents cropping for the map/regions image */
-}
+      flex:1 1 100%;
+      height:320px;
+    }
+
+    .photo.photo-wide img{
+      object-fit:contain; /* prevents cropping for the map/regions image */
+    }
 
     .subhead{
       margin:22px 0 10px 0;
@@ -178,7 +179,7 @@
 
       <p>
         My research is data-driven and grounded in fieldwork. I combine original datasets with interviews
-        and participant observation in Latin America and the Middle East to understand how armed
+        and participant observation in Latin America to understand how armed
         groups reorganize after war and why security outcomes vary across regions.
       </p>
 
@@ -193,10 +194,12 @@
       </div>
 
       <p>
-        A core empirical insight runs through my work on post-conflict armed organization: structures, bonds, and norms created
-        during war do not disappear after demobilization. They reconfigure through horizontal ties among local networks and vertical
-        ties that connect leaders, political representatives, and ex-combatants in the field. Interviews with political and institutional
-        actors inform how I conceptualize these post-conflict networks and their consequences for security.
+        A core empirical insight runs through my work on post-conflict armed organization: structures,
+        bonds, and norms created during war continue to shape networks of combatants after they disarm.
+        These networks reconfigure through horizontal ties among local actors and vertical ties that connect
+        leaders, political representatives, and ex-combatants in the field. Interviews with rebel leaders and
+        political elites inform how I conceptualize these post-conflict networks and their consequences for
+        postwar security.
       </p>
 
       <!-- Set 2: ex-combatants -->
@@ -210,19 +213,20 @@
       </div>
 
       <p>
-        In Colombia, I interviewed 130 ex-combatants of the FARC to reconstruct how demobilization and reintegration unfolded on the
-        ground, identify the sources of post-accord insecurity, and trace how organizational ties and local threats shape compliance,
-        remobilization risks, and trust in state protection. In a recent paper, I explain why in some areas, 
-        ex-combatants acquired high levels of trust in state security forces - often through everyday interactions like Sunday football matches - 
-        and how these ties shaped both attacks against ex-combatants and broader patterns of post-conflict homicide. 
+        In Colombia, I interviewed 130 former FARC combatants to reconstruct how demobilization and
+        reintegration unfolded on the ground. I identify the sources of post-accord insecurity and trace the
+        process through which rebel networks and state protection shape security outcomes. In a recent paper,
+        I explain why some ex-combatants acquire high levels of trust in state security forces and report
+        security threats to state agents. I show that this rebel-state cooperation reduced post-conflict
+        homicides, especially assassinations of ex-combatants.
       </p>
 
-            <div class="photo-row">
+      <div class="photo-row">
         <div class="photo">
-          <img src="assets/military3.jpg" alt="Sunday Football" />
+          <img src="assets/military3.jpg" alt="Fieldwork with military actors" />
         </div>
         <div class="photo">
-          <img src="assets/military1.jpg" alt="Sunday Football" />
+          <img src="assets/military1.jpg" alt="Fieldwork with military actors" />
         </div>
       </div>
 
@@ -234,47 +238,52 @@
         </li>
         <li>
           <a href="https://doi.org/10.1080/13533312.2022.2128337" target="_blank" rel="noopener">https://doi.org/10.1080/13533312.2022.2128337</a>
-          (Can the Rebel Body Function without its Visible Heads? The Role of Mid-Level Commanders in Peacebuilding)
+          (Can the Rebel Body Function without Its Visible Heads? The Role of Mid-Level Commanders in Peacebuilding)
         </li>
         <li>
           <a href="https://doi.org/10.1080/09546553.2021.2017895" target="_blank" rel="noopener">https://doi.org/10.1080/09546553.2021.2017895</a>
           (How Wartime Bonds Affect Ex-Combatant Political Attitudes: A Natural Experiment with the FARC)
         </li>
       </ul>
-<p>
-  I have also conducted fieldwork to explain empirical puzzles in peacebuilding: why does selective violence surges after war ends? 
-  How do local actors adopt national agendas when implementing peacebuilding? Why does civil war recur unevenly across the national territory? 
-  Across Catatumbo, Pacífico nariñense, and Urabá, I held focus-group discussions with social and community leaders, including Indigenous and Afro-Colombian authorities
-  within Indigenous territories. I also interviewed local government officials and United Nations representatives.  
-</p>
-   <!-- Set 1: community -->
+
+      <p>
+        I have also conducted fieldwork to explain empirical puzzles in peacebuilding: why does selective
+        violence surge after war ends? How do local actors adopt national agendas when implementing
+        peacebuilding? Why does civil war recur unevenly across national territory? In Catatumbo,
+        the Pacific coast of Nariño, and Urabá, I held focus-group discussions with social and community
+        leaders, including Indigenous and Afro-Colombian authorities in Indigenous territories. I also
+        interviewed local government officials and United Nations representatives.
+      </p>
+
+      <!-- Set 3: community -->
       <div class="photo-row">
         <div class="photo">
-          <img src="assets/community1.jpg" alt="Focus Group Discussion" />
+          <img src="assets/community1.jpg" alt="Focus-group discussion" />
         </div>
         <div class="photo">
-          <img src="assets/community2.jpg" alt="Meeting" />
+          <img src="assets/community2.jpg" alt="Meeting with community leaders" />
         </div>
       </div>
- <p>
-  Across Colombia, I visited cites for territorial peacebuilding (PDET projects). This research is important because it shows how “peace on paper” becomes 
-  governance in practice: when responsibilities are delegated to civilians in contested territories, their visibility, leverage, and exposure to violence can 
-  change. Based on field observations, interview materials, and large-N data I collected, I explain subnational variation in the postwar period in outcomes such as assassinations
-  and governance by armed groups. 
- </p>
-  
-<div class="subhead">Articles that draw on this fieldwork</div>
+
+      <p>
+        Across Colombia, I visited territorial development sites associated with PDET projects to identify
+        the division of labor in peacebuilding. In a recent paper, I show that when peacebuilding
+        responsibilities are delegated to civilians, their visibility and leverage heighten their exposure to
+        violence. Based on field observations, interview materials, and large-N data, I explain subnational
+        variation in selective violence against social and community leaders and human rights defenders.
+      </p>
+
+      <div class="subhead">Articles that draw on this fieldwork</div>
       <ul>
         <li>
           <a href="https://doi.org/10.1177/07388942251336643" target="_blank" rel="noopener">https://doi.org/10.1177/07388942251336643</a>
           (Delegative Peacebuilding: Explaining Post-Conflict Selective Violence)
         </li>
-        <li>
-          Why do Civil Wars Recur Unevenly? Landed Elites and Counterinsurgency in Colombia (manuscript under review)
-        </li>
       </ul>
 
     </div>
-  </div>  
+  </div>
+
 </body>
 </html>
+```
