@@ -1,5 +1,5 @@
-```html
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -11,6 +11,10 @@
       --text:#111;
       --rule:#ddd;
       --frame:#f6f6f6;
+    }
+
+    *{
+      box-sizing:border-box;
     }
 
     body{
@@ -32,6 +36,7 @@
       padding:12px 22px;
       gap:10px 18px;
     }
+
     .nav .brand{
       font-weight:700;
       font-size:18px;
@@ -39,11 +44,13 @@
       color:var(--text);
       white-space:nowrap;
     }
+
     .nav .links{
       display:flex;
       flex-wrap:wrap;
       gap:6px;
     }
+
     .nav .links a{
       padding:6px 10px;
       text-decoration:none;
@@ -61,6 +68,7 @@
       display:flex;
       justify-content:center;
     }
+
     .content{
       width:min(720px, 100%);
     }
@@ -73,6 +81,7 @@
       font-weight:700;
       letter-spacing:-0.2px;
     }
+
     p{
       font-size:14.5px;
       line-height:1.62;
@@ -80,6 +89,7 @@
       text-align:justify;
       hyphens:auto;
     }
+
     a{
       color:var(--text);
       text-decoration:underline;
@@ -119,7 +129,7 @@
     }
 
     .photo.photo-wide img{
-      object-fit:contain; /* prevents cropping for the map/regions image */
+      object-fit:contain;
     }
 
     .subhead{
@@ -131,10 +141,12 @@
       hyphens:none;
       text-transform:none;
     }
+
     ul{
       margin:0 0 14px 18px;
       padding:0;
     }
+
     li{
       font-size:14.5px;
       line-height:1.62;
@@ -143,30 +155,30 @@
       hyphens:auto;
     }
 
-/* Mobile */
-@media (max-width:900px){
-  .photo-row{
-    flex-direction:column;
-    gap:12px;
-  }
+    /* Mobile */
+    @media (max-width:900px){
+      .photo-row{
+        flex-direction:column;
+        gap:12px;
+      }
 
-  .photo{
-    flex:none;
-    width:100%;
-    height:280px;
-  }
+      .photo{
+        flex:none;
+        width:100%;
+        height:280px;
+      }
 
-  .photo img{
-    width:100%;
-    height:100%;
-    max-width:100%;
-    display:block;
-    object-fit:cover;
-    object-position:center;
-  }
-}
-
+      .photo img{
+        width:100%;
+        height:100%;
+        max-width:100%;
+        display:block;
+        object-fit:cover;
+        object-position:center;
+      }
+    }
   </style>
+
 </head>
 
 <body>
@@ -174,142 +186,156 @@
   <div class="nav">
     <a class="brand" href="index.html">Sally Sharif</a>
 
-    <div class="links">
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="fieldwork.html">Fieldwork</a>
-      <a href="datasets.html">Datasets</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="commentary.html">Commentary</a>
-      <a href="Sharif_CV.pdf" target="_blank" rel="noopener">CV</a>
-    </div>
+```
+<div class="links">
+  <a href="index.html">Home</a>
+  <a href="research.html">Research</a>
+  <a href="fieldwork.html">Fieldwork</a>
+  <a href="datasets.html">Datasets</a>
+  <a href="teaching.html">Teaching</a>
+  <a href="commentary.html">Commentary</a>
+  <a href="Sharif_CV.pdf" target="_blank" rel="noopener">CV</a>
+</div>
+```
+
   </div>
 
   <div class="wrap">
     <div class="content">
 
-      <h1 class="section-title">Fieldwork</h1>
+```
+  <h1 class="section-title">Fieldwork</h1>
 
-      <p>
-        My research is data-driven and grounded in fieldwork. I combine original datasets with interviews
-        and participant observation in Latin America to understand how armed
-        groups reorganize after war and why security outcomes vary across regions.
-      </p>
+  <p>
+    My research is data-driven and grounded in fieldwork. I combine original datasets with interviews
+    and participant observation in Latin America to understand how armed groups reorganize after war
+    and why security outcomes vary across regions.
+  </p>
 
-      <!-- Set 1: political leaders -->
-      <div class="photo-row">
-        <div class="photo">
-          <img src="assets/politician1.jpg" alt="Interview" />
-        </div>
-        <div class="photo">
-          <img src="assets/politician2.jpg" alt="Meeting" />
-        </div>
-      </div>
+  <!-- Set 1: political leaders -->
+  <div class="photo-row">
+    <div class="photo">
+      <img src="assets/politician1.jpg" alt="Interview" />
+    </div>
+    <div class="photo">
+      <img src="assets/politician2.jpg" alt="Meeting" />
+    </div>
+  </div>
 
-      <p>
-        A core empirical insight runs through my work on post-conflict armed organization: structures,
-        bonds, and norms created during war continue to shape networks of combatants after they disarm.
-        These networks reconfigure through horizontal ties among local actors and vertical ties that connect
-        leaders, political representatives, and ex-combatants in the field. Interviews with rebel leaders and
-        political elites inform how I conceptualize these post-conflict networks and their consequences for
-        postwar security.
-      </p>
+  <p>
+    A core empirical insight runs through my work on post-conflict armed organization: structures,
+    bonds, and norms created during war continue to shape networks of combatants after they disarm.
+    These networks reconfigure through horizontal ties among local actors and vertical ties that connect
+    leaders, political representatives, and ex-combatants in the field. Interviews with rebel leaders and
+    political elites inform how I conceptualize these post-conflict networks and their consequences for
+    postwar security.
+  </p>
 
-      <!-- Set 2: ex-combatants -->
-      <div class="photo-row">
-        <div class="photo">
-          <img src="assets/excombatant1.jpg" alt="Field interview with ex-combatants" />
-        </div>
-        <div class="photo">
-          <img src="assets/excombatant2.jpg" alt="Fieldwork site visit and interviews" />
-        </div>
-      </div>
+  <!-- Set 2: ex-combatants -->
+  <div class="photo-row">
+    <div class="photo">
+      <img src="assets/excombatant1.jpg" alt="Field interview with ex-combatants" />
+    </div>
+    <div class="photo">
+      <img src="assets/excombatant2.jpg" alt="Fieldwork site visit and interviews" />
+    </div>
+  </div>
 
-      <p>
-        In Colombia, I interviewed 130 former FARC combatants to reconstruct how demobilization and
-        reintegration unfolded on the ground. I identify the sources of post-accord insecurity and trace the
-        process through which rebel networks and state protection shape security outcomes. In a recent paper,
-        I explain why some ex-combatants acquire high levels of trust in state security forces and report
-        security threats to state agents. I show that this rebel-state cooperation reduced post-conflict
-        homicides, especially assassinations of ex-combatants.
-      </p>
+  <p>
+    In Colombia, I interviewed 130 former FARC combatants to reconstruct how demobilization and
+    reintegration unfolded on the ground. I identify the sources of post-accord insecurity and trace the
+    process through which rebel networks and state protection shape security outcomes. In a recent paper,
+    I explain why some ex-combatants acquire high levels of trust in state security forces and report
+    security threats to state agents. I show that this rebel-state cooperation reduced post-conflict
+    homicides, especially assassinations of ex-combatants.
+  </p>
 
-      <div class="photo-row">
-        <div class="photo">
-          <img src="assets/military3.jpg" alt="Fieldwork with military actors" />
-        </div>
-        <div class="photo">
-          <img src="assets/military1.jpg" alt="Fieldwork with military actors" />
-        </div>
-      </div>
+  <!-- Set 3: military actors -->
+  <div class="photo-row">
+    <div class="photo">
+      <img src="assets/military3.jpg" alt="Fieldwork with military actors" />
+    </div>
+    <div class="photo">
+      <img src="assets/military1.jpg" alt="Fieldwork with military actors" />
+    </div>
+  </div>
 
-      <div class="subhead">Articles that draw on this fieldwork</div>
-      <ul>
-        <li>
-          <a href="https://doi.org/10.1080/03050629.2026.2625722" target="_blank" rel="noopener">https://doi.org/10.1080/03050629.2026.2625722</a>
-          (When Reintegration of Ex-Combatants Turns Deadly: The State’s Role in Preventing Post-Conflict Homicides)
-        </li>
-        <li>
-          <a href="https://doi.org/10.1080/13533312.2022.2128337" target="_blank" rel="noopener">https://doi.org/10.1080/13533312.2022.2128337</a>
-          (Can the Rebel Body Function without Its Visible Heads? The Role of Mid-Level Commanders in Peacebuilding)
-        </li>
-        <li>
-          <a href="https://doi.org/10.1080/09546553.2021.2017895" target="_blank" rel="noopener">https://doi.org/10.1080/09546553.2021.2017895</a>
-          (How Wartime Bonds Affect Ex-Combatant Political Attitudes: A Natural Experiment with the FARC)
-        </li>
-      </ul>
+  <div class="subhead">Articles that draw on this fieldwork</div>
+  <ul>
+    <li>
+      When Reintegration of Ex-Combatants Turns Deadly: The State’s Role in Preventing Post-Conflict Homicides
+      (<a href="https://doi.org/10.1080/03050629.2026.2625722" target="_blank" rel="noopener">https://doi.org/10.1080/03050629.2026.2625722</a>)
+    </li>
+    <li>
+      Can the Rebel Body Function without Its Visible Heads? The Role of Mid-Level Commanders in Peacebuilding
+      (<a href="https://doi.org/10.1080/13533312.2022.2128337" target="_blank" rel="noopener">https://doi.org/10.1080/13533312.2022.2128337</a>)
+    </li>
+    <li>
+      How Wartime Bonds Affect Ex-Combatant Political Attitudes: A Natural Experiment with the FARC
+      (<a href="https://doi.org/10.1080/09546553.2021.2017895" target="_blank" rel="noopener">https://doi.org/10.1080/09546553.2021.2017895</a>)
+    </li>
+    <li>
+      From Insurgent to Activist: Rebel Participation in Postwar Democratic Politics (under review)
+    </li>
+  </ul>
 
-      <!-- Set 3: community -->
-      <div class="photo-row">
-        <div class="photo">
-          <img src="assets/community1.jpg" alt="Focus-group discussion" />
-        </div>
-        <div class="photo">
-          <img src="assets/community2.jpg" alt="Meeting with community leaders" />
-        </div>
-      </div>
+  <!-- Set 4: community -->
+  <div class="photo-row">
+    <div class="photo">
+      <img src="assets/community1.jpg" alt="Focus-group discussion" />
+    </div>
+    <div class="photo">
+      <img src="assets/community2.jpg" alt="Meeting with community leaders" />
+    </div>
+  </div>
 
-      <p>
-        I have also conducted fieldwork to explain empirical puzzles in peacebuilding: why does selective
-        violence surge after war ends? How do local actors adopt national agendas when implementing
-        peacebuilding? Why does civil war recur unevenly across national territory? In Catatumbo,
-        the Pacific coast of Nariño, and Urabá, I held focus-group discussions with social and community
-        leaders, including Indigenous and Afro-Colombian authorities in Indigenous territories. I also
-        interviewed local government officials and United Nations representatives. In a recent paper, I show 
-        that when peacebuilding responsibilities are delegated to civilians, their visibility and leverage 
-        heighten their exposure to violence. The in-depth field research helps explain an empirical puzzle: why postwar 
-        countries experience a surge in selective violence against social/community leaders and human rights defenders.
-      </p>
+  <p>
+    I have also conducted fieldwork to explain empirical puzzles in peacebuilding: why does selective
+    violence surge after war ends? How do local actors adopt national agendas when implementing
+    peacebuilding? Why does civil war recur unevenly across national territory? In Catatumbo,
+    the Pacific coast of Nariño, and Urabá, I held focus-group discussions with social and community
+    leaders, including Indigenous and Afro-Colombian authorities in Indigenous territories. I also
+    interviewed local government officials and United Nations representatives. In a recent paper, I show
+    that when peacebuilding responsibilities are delegated to civilians, their visibility and leverage
+    heighten their exposure to violence. The in-depth field research helps explain an empirical puzzle:
+    why postwar countries experience a surge in selective violence against social and community leaders
+    and human rights defenders.
+  </p>
 
-      <div class="subhead">Articles that draw on this fieldwork</div>
-      <ul>
-        <li>
-          <a href="https://doi.org/10.1177/07388942251336643" target="_blank" rel="noopener">https://doi.org/10.1177/07388942251336643</a>
-          (Delegative Peacebuilding: Explaining Post-Conflict Selective Violence)
-        </li>
-         <li>
-          Transitional Justice and Postwar Implementation of Development Programs (Under review)
-        </li>
-      </ul>
+  <div class="subhead">Articles that draw on this fieldwork</div>
+  <ul>
+    <li>
+      Delegative Peacebuilding: Explaining Post-Conflict Selective Violence
+      (<a href="https://doi.org/10.1177/07388942251336643" target="_blank" rel="noopener">https://doi.org/10.1177/07388942251336643</a>)
+    </li>
+    <li>
+      Transitional Justice and Postwar Implementation of Development Programs (under review)
+    </li>
+  </ul>
 
   <!-- Set 5: Guatemala -->
-      <div class="photo-row">
-        <div class="photo">
-          <img src="assets/CIRMA.jpg" alt="Archival research in Guatemala" />
-        </div>
-        <div class="photo">
-          <img src="assets/highlands.jpg" alt="Fieldwork site visit and interviews" />
-        </div>
-      </div>
-
-      <p>
-        For a case study chapter of my book, I did archival research in the conflict archives of Guatemala. I triangulated the findings by
-        engaging in participant observation in the country's Indigenous highlands. The analysis traces the incentives and actions of key actors 
-        during the peace process that started in the 1990s. The research explains the factors that reduced incentives for renewed insurgency and those that 
-        created the conditions for high levels of political violence in the postwar period.
-      </p>
-</div>
+  <div class="photo-row">
+    <div class="photo">
+      <img src="assets/CIRMA.jpg" alt="Archival research in Guatemala" />
+    </div>
+    <div class="photo">
+      <img src="assets/highlands.jpg" alt="Fieldwork site visit and interviews" />
+    </div>
   </div>
+
+  <p>
+    For a case study chapter of my book, I did archival research in the conflict archives of Guatemala.
+    I triangulated the findings by engaging in participant observation in the country's Indigenous
+    highlands. The analysis traces the incentives and actions of key actors during the peace process
+    that started in the 1990s. The research explains the factors that reduced incentives for renewed
+    insurgency and those that created the conditions for high levels of political violence in the
+    postwar period.
+  </p>
+
+</div>
+```
+
+  </div>
+
 </body>
 </html>
-```
