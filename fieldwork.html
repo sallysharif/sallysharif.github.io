@@ -143,16 +143,29 @@
       hyphens:auto;
     }
 
-    /* Mobile */
-    @media (max-width:900px){
-      .photo-row{
-        flex-direction:column;
-        gap:12px;
-      }
-      .photo{
-        height:280px;
-      }
-    }
+/* Mobile */
+@media (max-width:900px){
+  .photo-row{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .photo{
+    flex:none;
+    width:100%;
+    height:280px;
+  }
+
+  .photo img{
+    width:100%;
+    height:100%;
+    max-width:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+  }
+}
+
   </style>
 </head>
 
@@ -275,7 +288,7 @@
           (Delegative Peacebuilding: Explaining Post-Conflict Selective Violence)
         </li>
          <li>
-          <a Transitional Justice and Postwar Implementation of Development Programs (Under review)
+          Transitional Justice and Postwar Implementation of Development Programs (Under review)
         </li>
       </ul>
 
